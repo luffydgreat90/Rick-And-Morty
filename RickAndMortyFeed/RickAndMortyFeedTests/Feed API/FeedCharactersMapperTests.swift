@@ -43,7 +43,7 @@ final class FeedItemMapperTests: XCTestCase {
         
         let json = makeItemsJSON([item1.json, item2.json])
         
-        let result = try FeedItemsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
+        let result = try FeedCharactersMapper.map(json, from: HTTPURLResponse(statusCode: 200))
         
         XCTAssertEqual(result, [item1.model, item2.model])
     }
