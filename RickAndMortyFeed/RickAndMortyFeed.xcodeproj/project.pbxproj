@@ -22,6 +22,7 @@
 		8EBD09D9295906F000767901 /* ManagedFeedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09D8295906F000767901 /* ManagedFeedCharacter.swift */; };
 		8EBD09DB295910BB00767901 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09DA295910BB00767901 /* FeedStore.swift */; };
 		8EBD09DD295910DC00767901 /* LocalFeedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09DC295910DC00767901 /* LocalFeedCharacter.swift */; };
+		8EBD09DF295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09DE295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8EBD09D8295906F000767901 /* ManagedFeedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedCharacter.swift; sourceTree = "<group>"; };
 		8EBD09DA295910BB00767901 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		8EBD09DC295910DC00767901 /* LocalFeedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedCharacter.swift; sourceTree = "<group>"; };
+		8EBD09DE295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedCharacterStore+FeedStore.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				8EBD09D42959044F00767901 /* CoreDataHelpers.swift */,
 				8EBD09D62959068000767901 /* ManagedCache.swift */,
 				8EBD09D8295906F000767901 /* ManagedFeedCharacter.swift */,
+				8EBD09DE295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				8EBD09C32958FCA000767901 /* FeedCharactersMapper.swift in Sources */,
 				8EBD09D02959011600767901 /* FeedCharacterStore.xcdatamodeld in Sources */,
 				8EBD09DB295910BB00767901 /* FeedStore.swift in Sources */,
+				8EBD09DF295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift in Sources */,
 				8EBD09D52959044F00767901 /* CoreDataHelpers.swift in Sources */,
 				8EBD09CA2958FFFB00767901 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				8EBD09D72959068000767901 /* ManagedCache.swift in Sources */,

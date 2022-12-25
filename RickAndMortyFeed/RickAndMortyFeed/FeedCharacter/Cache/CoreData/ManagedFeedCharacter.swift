@@ -20,4 +20,8 @@ class ManagedFeedCharacter: NSManagedObject {
     @NSManaged var cache: ManagedCache
 }
 
-
+extension ManagedFeedCharacter {
+    var local: LocalFeedCharacter {
+        return LocalFeedCharacter(id: Int(id), name: name, status: status, species: species, gender: gender, image: image, url: url)
+    }
+}

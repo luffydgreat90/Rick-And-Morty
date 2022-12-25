@@ -28,5 +28,9 @@ extension ManagedCache {
         try deleteCache(in: context)
         return ManagedCache(context: context)
     }
+    
+    var localFeed: [LocalFeedCharacter] {
+        return feed.compactMap { ($0 as? ManagedFeedCharacter)?.local }
+    }
 }
 
