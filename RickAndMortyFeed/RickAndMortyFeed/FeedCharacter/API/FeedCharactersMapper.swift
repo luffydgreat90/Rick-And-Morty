@@ -29,7 +29,7 @@ public enum FeedCharactersMapper {
     public static func map(_ data: Data, from response: HTTPURLResponse) throws -> [FeedCharacter] {
         let decoder = JSONDecoder()
         
-        guard response.statusCode == 200, let root = try? decoder.decode(Root.self, from: data) else {
+        guard response.isOK, let root = try? decoder.decode(Root.self, from: data) else {
             throw Error.invalidData
         }
         
