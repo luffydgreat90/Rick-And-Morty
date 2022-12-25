@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8EBD09A82958EA1700767901 /* RickAndMortyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD099D2958EA1700767901 /* RickAndMortyFeed.framework */; };
-		8EBD09AD2958EA1700767901 /* FeedItemMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09AC2958EA1700767901 /* FeedItemMapperTests.swift */; };
+		8EBD09AD2958EA1700767901 /* FeedCharactersMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */; };
 		8EBD09BA2958F0AE00767901 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09B92958F0AE00767901 /* SharedTestHelpers.swift */; };
+		8EBD09C12958FC1900767901 /* FeedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09C02958FC1900767901 /* FeedCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,8 +26,9 @@
 /* Begin PBXFileReference section */
 		8EBD099D2958EA1700767901 /* RickAndMortyFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RickAndMortyFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09A72958EA1700767901 /* RickAndMortyFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EBD09AC2958EA1700767901 /* FeedItemMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemMapperTests.swift; sourceTree = "<group>"; };
+		8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharactersMapperTests.swift; sourceTree = "<group>"; };
 		8EBD09B92958F0AE00767901 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		8EBD09C02958FC1900767901 /* FeedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharacter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		8EBD099F2958EA1700767901 /* RickAndMortyFeed */ = {
 			isa = PBXGroup;
 			children = (
+				8EBD09BC2958FB8F00767901 /* FeedCharacter */,
 			);
 			path = RickAndMortyFeed;
 			sourceTree = "<group>";
@@ -85,7 +88,7 @@
 		8EBD09B72958ED4100767901 /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
-				8EBD09AC2958EA1700767901 /* FeedItemMapperTests.swift */,
+				8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -96,6 +99,30 @@
 				8EBD09B92958F0AE00767901 /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8EBD09BC2958FB8F00767901 /* FeedCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				8EBD09BF2958FC0A00767901 /* FeedCharacter Feature */,
+				8EBD09BE2958FBC400767901 /* FeedCharacter API */,
+			);
+			path = FeedCharacter;
+			sourceTree = "<group>";
+		};
+		8EBD09BE2958FBC400767901 /* FeedCharacter API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "FeedCharacter API";
+			sourceTree = "<group>";
+		};
+		8EBD09BF2958FC0A00767901 /* FeedCharacter Feature */ = {
+			isa = PBXGroup;
+			children = (
+				8EBD09C02958FC1900767901 /* FeedCharacter.swift */,
+			);
+			path = "FeedCharacter Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +186,7 @@
 				TargetAttributes = {
 					8EBD099C2958EA1700767901 = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 					8EBD09A62958EA1700767901 = {
 						CreatedOnToolsVersion = 14.1;
@@ -206,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EBD09C12958FC1900767901 /* FeedCharacter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EBD09BA2958F0AE00767901 /* SharedTestHelpers.swift in Sources */,
-				8EBD09AD2958EA1700767901 /* FeedItemMapperTests.swift in Sources */,
+				8EBD09AD2958EA1700767901 /* FeedCharactersMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +381,7 @@
 		8EBD09B22958EA1700767901 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -371,6 +401,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,6 +410,7 @@
 		8EBD09B32958EA1700767901 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -406,6 +438,7 @@
 		8EBD09B52958EA1700767901 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -421,6 +454,7 @@
 		8EBD09B62958EA1700767901 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

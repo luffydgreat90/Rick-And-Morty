@@ -6,18 +6,9 @@
 //
 
 import XCTest
+import RickAndMortyFeed
 
-public struct FeedCharacter: Equatable {
-    public let id: Int
-    public let name: String
-    public let status: String
-    public let species: String
-    public let gender: String
-    public let image: URL
-    public let url: URL
-}
-
-public enum FeedItemsMapper {
+public enum FeedCharactersMapper {
     private struct Root: Decodable {
         let results: [RemoteFeedCharacter]
     }
@@ -63,7 +54,7 @@ final class FeedItemMapperTests: XCTestCase {
         
         try samples.forEach { code in
             XCTAssertThrowsError(
-                try FeedItemsMapper.map(json, from: HTTPURLResponse(statusCode: code))
+                try FeedCharactersMapper.map(json, from: HTTPURLResponse(statusCode: code))
             )
         }
     }
@@ -72,14 +63,14 @@ final class FeedItemMapperTests: XCTestCase {
         let invalidJSON = Data("invalid json".utf8)
         
         XCTAssertThrowsError(
-            try FeedItemsMapper.map(invalidJSON, from: HTTPURLResponse(statusCode: 200))
+            try FeedCharactersMapper.map(invalidJSON, from: HTTPURLResponse(statusCode: 200))
         )
     }
     
     func test_map_deliversNoItemsOn200HTTPResponseWithEmptyJSONList() throws {
         let emptyListJSON = makeItemsJSON([])
         
-        let result = try FeedItemsMapper.map(emptyListJSON, from: HTTPURLResponse(statusCode: 200))
+        let result = try FeedCharactersMapper.map(emptyListJSON, from: HTTPURLResponse(statusCode: 200))
         
         XCTAssertEqual(result, [])
     }
