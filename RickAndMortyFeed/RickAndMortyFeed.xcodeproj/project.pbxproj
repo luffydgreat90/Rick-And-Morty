@@ -20,6 +20,8 @@
 		8EBD09D52959044F00767901 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09D42959044F00767901 /* CoreDataHelpers.swift */; };
 		8EBD09D72959068000767901 /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09D62959068000767901 /* ManagedCache.swift */; };
 		8EBD09D9295906F000767901 /* ManagedFeedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09D8295906F000767901 /* ManagedFeedCharacter.swift */; };
+		8EBD09DB295910BB00767901 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09DA295910BB00767901 /* FeedStore.swift */; };
+		8EBD09DD295910DC00767901 /* LocalFeedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09DC295910DC00767901 /* LocalFeedCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		8EBD09D42959044F00767901 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		8EBD09D62959068000767901 /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
 		8EBD09D8295906F000767901 /* ManagedFeedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedCharacter.swift; sourceTree = "<group>"; };
+		8EBD09DA295910BB00767901 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
+		8EBD09DC295910DC00767901 /* LocalFeedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedCharacter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				8EBD09D12959038700767901 /* CoreData */,
+				8EBD09DA295910BB00767901 /* FeedStore.swift */,
+				8EBD09DC295910DC00767901 /* LocalFeedCharacter.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -306,10 +312,12 @@
 				8EBD09D9295906F000767901 /* ManagedFeedCharacter.swift in Sources */,
 				8EBD09C32958FCA000767901 /* FeedCharactersMapper.swift in Sources */,
 				8EBD09D02959011600767901 /* FeedCharacterStore.xcdatamodeld in Sources */,
+				8EBD09DB295910BB00767901 /* FeedStore.swift in Sources */,
 				8EBD09D52959044F00767901 /* CoreDataHelpers.swift in Sources */,
 				8EBD09CA2958FFFB00767901 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				8EBD09D72959068000767901 /* ManagedCache.swift in Sources */,
 				8EBD09C12958FC1900767901 /* FeedCharacter.swift in Sources */,
+				8EBD09DD295910DC00767901 /* LocalFeedCharacter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

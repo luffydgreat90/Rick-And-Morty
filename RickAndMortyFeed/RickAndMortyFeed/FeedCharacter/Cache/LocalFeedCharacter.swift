@@ -1,5 +1,5 @@
 //
-//  FeedCharacter.swift
+//  LocalFeedCharacter.swift
 //  RickAndMortyFeed
 //
 //  Created by Marlon Ansale on 12/25/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct FeedCharacter: Hashable {
+public struct LocalFeedCharacter: Equatable {
     public let id: Int
     public let name: String
     public let status: String
