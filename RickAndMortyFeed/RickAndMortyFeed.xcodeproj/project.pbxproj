@@ -18,6 +18,8 @@
 		8EBD09D02959011600767901 /* FeedCharacterStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09CE2959011600767901 /* FeedCharacterStore.xcdatamodeld */; };
 		8EBD09D3295903A100767901 /* CoreDataFeedCharacterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09D2295903A100767901 /* CoreDataFeedCharacterStore.swift */; };
 		8EBD09D52959044F00767901 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09D42959044F00767901 /* CoreDataHelpers.swift */; };
+		8EBD09D72959068000767901 /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09D62959068000767901 /* ManagedCache.swift */; };
+		8EBD09D9295906F000767901 /* ManagedFeedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09D8295906F000767901 /* ManagedFeedCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		8EBD09CF2959011600767901 /* FeedCharacterStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedCharacterStore.xcdatamodel; sourceTree = "<group>"; };
 		8EBD09D2295903A100767901 /* CoreDataFeedCharacterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedCharacterStore.swift; sourceTree = "<group>"; };
 		8EBD09D42959044F00767901 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
+		8EBD09D62959068000767901 /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
+		8EBD09D8295906F000767901 /* ManagedFeedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedCharacter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,8 @@
 				8EBD09CE2959011600767901 /* FeedCharacterStore.xcdatamodeld */,
 				8EBD09D2295903A100767901 /* CoreDataFeedCharacterStore.swift */,
 				8EBD09D42959044F00767901 /* CoreDataHelpers.swift */,
+				8EBD09D62959068000767901 /* ManagedCache.swift */,
+				8EBD09D8295906F000767901 /* ManagedFeedCharacter.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -297,10 +303,12 @@
 			files = (
 				8EBD09D3295903A100767901 /* CoreDataFeedCharacterStore.swift in Sources */,
 				8EBD09C52958FE0F00767901 /* FeedEndpoint.swift in Sources */,
+				8EBD09D9295906F000767901 /* ManagedFeedCharacter.swift in Sources */,
 				8EBD09C32958FCA000767901 /* FeedCharactersMapper.swift in Sources */,
 				8EBD09D02959011600767901 /* FeedCharacterStore.xcdatamodeld in Sources */,
 				8EBD09D52959044F00767901 /* CoreDataHelpers.swift in Sources */,
 				8EBD09CA2958FFFB00767901 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				8EBD09D72959068000767901 /* ManagedCache.swift in Sources */,
 				8EBD09C12958FC1900767901 /* FeedCharacter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
