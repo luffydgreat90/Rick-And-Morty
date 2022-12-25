@@ -11,6 +11,7 @@
 		8EBD09AD2958EA1700767901 /* FeedCharactersMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */; };
 		8EBD09BA2958F0AE00767901 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09B92958F0AE00767901 /* SharedTestHelpers.swift */; };
 		8EBD09C12958FC1900767901 /* FeedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09C02958FC1900767901 /* FeedCharacter.swift */; };
+		8EBD09C32958FCA000767901 /* FeedCharactersMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09C22958FCA000767901 /* FeedCharactersMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharactersMapperTests.swift; sourceTree = "<group>"; };
 		8EBD09B92958F0AE00767901 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		8EBD09C02958FC1900767901 /* FeedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharacter.swift; sourceTree = "<group>"; };
+		8EBD09C22958FCA000767901 /* FeedCharactersMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharactersMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		8EBD09BE2958FBC400767901 /* FeedCharacter API */ = {
 			isa = PBXGroup;
 			children = (
+				8EBD09C22958FCA000767901 /* FeedCharactersMapper.swift */,
 			);
 			path = "FeedCharacter API";
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EBD09C32958FCA000767901 /* FeedCharactersMapper.swift in Sources */,
 				8EBD09C12958FC1900767901 /* FeedCharacter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,44 +8,6 @@
 import XCTest
 import RickAndMortyFeed
 
-public enum FeedCharactersMapper {
-    private struct Root: Decodable {
-        let results: [RemoteFeedCharacter]
-    }
-    
-    private struct RemoteFeedCharacter: Decodable {
-        let id: Int
-        let name: String
-        let status: String
-        let species: String
-        let gender: String
-        let image: URL
-        let url: URL
-    }
-    
-    public enum Error: Swift.Error {
-        case invalidData
-    }
-    
-    public static func map(_ data: Data, from response: HTTPURLResponse) throws -> [FeedCharacter] {
-        let decoder = JSONDecoder()
-        
-        guard response.statusCode == 200, let root = try? decoder.decode(Root.self, from: data) else {
-            throw Error.invalidData
-        }
-        
-        return root.results.map {
-            FeedCharacter(id: $0.id,
-                          name: $0.name,
-                          status: $0.status,
-                          species: $0.species,
-                          gender: $0.gender,
-                          image: $0.image,
-                          url: $0.url)
-        }
-    }
-}
-
 final class FeedItemMapperTests: XCTestCase {
 
     func test_map_throwsErrorOnNon200HTTPResponse() throws {
