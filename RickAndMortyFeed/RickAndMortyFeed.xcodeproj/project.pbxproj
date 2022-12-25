@@ -12,6 +12,8 @@
 		8EBD09BA2958F0AE00767901 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09B92958F0AE00767901 /* SharedTestHelpers.swift */; };
 		8EBD09C12958FC1900767901 /* FeedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09C02958FC1900767901 /* FeedCharacter.swift */; };
 		8EBD09C32958FCA000767901 /* FeedCharactersMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09C22958FCA000767901 /* FeedCharactersMapper.swift */; };
+		8EBD09C52958FE0F00767901 /* FeedEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09C42958FE0F00767901 /* FeedEndpoint.swift */; };
+		8EBD09C72958FE6A00767901 /* FeedEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09C62958FE6A00767901 /* FeedEndpointTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		8EBD09B92958F0AE00767901 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		8EBD09C02958FC1900767901 /* FeedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharacter.swift; sourceTree = "<group>"; };
 		8EBD09C22958FCA000767901 /* FeedCharactersMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharactersMapper.swift; sourceTree = "<group>"; };
+		8EBD09C42958FE0F00767901 /* FeedEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEndpoint.swift; sourceTree = "<group>"; };
+		8EBD09C62958FE6A00767901 /* FeedEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEndpointTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */,
+				8EBD09C62958FE6A00767901 /* FeedEndpointTests.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				8EBD09C22958FCA000767901 /* FeedCharactersMapper.swift */,
+				8EBD09C42958FE0F00767901 /* FeedEndpoint.swift */,
 			);
 			path = "FeedCharacter API";
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EBD09C52958FE0F00767901 /* FeedEndpoint.swift in Sources */,
 				8EBD09C32958FCA000767901 /* FeedCharactersMapper.swift in Sources */,
 				8EBD09C12958FC1900767901 /* FeedCharacter.swift in Sources */,
 			);
@@ -246,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EBD09C72958FE6A00767901 /* FeedEndpointTests.swift in Sources */,
 				8EBD09BA2958F0AE00767901 /* SharedTestHelpers.swift in Sources */,
 				8EBD09AD2958EA1700767901 /* FeedCharactersMapperTests.swift in Sources */,
 			);
