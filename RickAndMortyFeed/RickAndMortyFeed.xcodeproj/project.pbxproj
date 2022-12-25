@@ -111,27 +111,27 @@
 		8EBD09BC2958FB8F00767901 /* FeedCharacter */ = {
 			isa = PBXGroup;
 			children = (
-				8EBD09BF2958FC0A00767901 /* FeedCharacter Feature */,
-				8EBD09BE2958FBC400767901 /* FeedCharacter API */,
+				8EBD09BF2958FC0A00767901 /* Domain */,
+				8EBD09BE2958FBC400767901 /* API */,
 			);
 			path = FeedCharacter;
 			sourceTree = "<group>";
 		};
-		8EBD09BE2958FBC400767901 /* FeedCharacter API */ = {
+		8EBD09BE2958FBC400767901 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				8EBD09C22958FCA000767901 /* FeedCharactersMapper.swift */,
 				8EBD09C42958FE0F00767901 /* FeedEndpoint.swift */,
 			);
-			path = "FeedCharacter API";
+			path = API;
 			sourceTree = "<group>";
 		};
-		8EBD09BF2958FC0A00767901 /* FeedCharacter Feature */ = {
+		8EBD09BF2958FC0A00767901 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				8EBD09C02958FC1900767901 /* FeedCharacter.swift */,
 			);
-			path = "FeedCharacter Feature";
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
