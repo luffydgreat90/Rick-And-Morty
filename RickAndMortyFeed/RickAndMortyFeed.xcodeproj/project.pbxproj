@@ -14,6 +14,7 @@
 		8EBD09C32958FCA000767901 /* FeedCharactersMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09C22958FCA000767901 /* FeedCharactersMapper.swift */; };
 		8EBD09C52958FE0F00767901 /* FeedEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09C42958FE0F00767901 /* FeedEndpoint.swift */; };
 		8EBD09C72958FE6A00767901 /* FeedEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09C62958FE6A00767901 /* FeedEndpointTests.swift */; };
+		8EBD09CA2958FFFB00767901 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09C92958FFFB00767901 /* HTTPURLResponse+StatusCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		8EBD09C22958FCA000767901 /* FeedCharactersMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharactersMapper.swift; sourceTree = "<group>"; };
 		8EBD09C42958FE0F00767901 /* FeedEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEndpoint.swift; sourceTree = "<group>"; };
 		8EBD09C62958FE6A00767901 /* FeedEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEndpointTests.swift; sourceTree = "<group>"; };
+		8EBD09C92958FFFB00767901 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		8EBD09BE2958FBC400767901 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				8EBD09C82958FFED00767901 /* Helpers */,
 				8EBD09C22958FCA000767901 /* FeedCharactersMapper.swift */,
 				8EBD09C42958FE0F00767901 /* FeedEndpoint.swift */,
 			);
@@ -132,6 +135,14 @@
 				8EBD09C02958FC1900767901 /* FeedCharacter.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		8EBD09C82958FFED00767901 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8EBD09C92958FFFB00767901 /* HTTPURLResponse+StatusCode.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 			files = (
 				8EBD09C52958FE0F00767901 /* FeedEndpoint.swift in Sources */,
 				8EBD09C32958FCA000767901 /* FeedCharactersMapper.swift in Sources */,
+				8EBD09CA2958FFFB00767901 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				8EBD09C12958FC1900767901 /* FeedCharacter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
