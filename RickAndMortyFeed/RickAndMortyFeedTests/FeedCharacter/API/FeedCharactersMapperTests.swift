@@ -16,7 +16,8 @@ final class FeedItemMapperTests: XCTestCase {
         
         try samples.forEach { code in
             XCTAssertThrowsError(
-                try FeedCharactersMapper.map(json, from: HTTPURLResponse(statusCode: code))
+                try FeedCharactersMapper.map(json, from: HTTPURLResponse(statusCode: code)),
+                "code is \(code)"
             )
         }
     }
