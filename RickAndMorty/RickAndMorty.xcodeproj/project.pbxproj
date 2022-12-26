@@ -102,6 +102,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E3C36F7295A33DA00EA6ADC /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
 		8EBD09572958E82100767901 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +133,7 @@
 		8EBD09622958E82100767901 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				8E3C36F7295A33DA00EA6ADC /* Composer */,
 				8EBD09632958E82100767901 /* AppDelegate.swift */,
 				8EBD09652958E82100767901 /* SceneDelegate.swift */,
 				8EBD09672958E82100767901 /* ViewController.swift */,

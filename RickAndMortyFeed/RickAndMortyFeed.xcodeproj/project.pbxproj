@@ -18,6 +18,7 @@
 		8E3C36D8295A243300EA6ADC /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36D7295A243300EA6ADC /* URLSessionHTTPClientTests.swift */; };
 		8E3C36DB295A278D00EA6ADC /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36DA295A278D00EA6ADC /* LoadResourcePresenter.swift */; };
 		8E3C36DD295A281B00EA6ADC /* Shared.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E3C36DC295A281B00EA6ADC /* Shared.strings */; };
+		8E3C36FE295A374100EA6ADC /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3C36FD295A374100EA6ADC /* Feed.storyboard */; };
 		8EBD09A82958EA1700767901 /* RickAndMortyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD099D2958EA1700767901 /* RickAndMortyFeed.framework */; };
 		8EBD09AD2958EA1700767901 /* FeedCharactersMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */; };
 		8EBD09BA2958F0AE00767901 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09B92958F0AE00767901 /* SharedTestHelpers.swift */; };
@@ -58,6 +59,7 @@
 		8E3C36D7295A243300EA6ADC /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		8E3C36DA295A278D00EA6ADC /* LoadResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenter.swift; sourceTree = "<group>"; };
 		8E3C36DC295A281B00EA6ADC /* Shared.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Shared.strings; sourceTree = "<group>"; };
+		8E3C36FD295A374100EA6ADC /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		8EBD099D2958EA1700767901 /* RickAndMortyFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RickAndMortyFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09A72958EA1700767901 /* RickAndMortyFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharactersMapperTests.swift; sourceTree = "<group>"; };
@@ -180,9 +182,58 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		8E3C36F8295A33ED00EA6ADC /* RickAndMortyiOS */ = {
+			isa = PBXGroup;
+			children = (
+				8E3C36FF295A375E00EA6ADC /* Shared UI */,
+				8E3C36F9295A345B00EA6ADC /* Feed UI */,
+			);
+			path = RickAndMortyiOS;
+			sourceTree = "<group>";
+		};
+		8E3C36F9295A345B00EA6ADC /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				8E3C36FB295A347200EA6ADC /* View */,
+				8E3C36FA295A346C00EA6ADC /* Controllers */,
+			);
+			path = "Feed UI";
+			sourceTree = "<group>";
+		};
+		8E3C36FA295A346C00EA6ADC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8E3C36FB295A347200EA6ADC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E3C36FC295A347C00EA6ADC /* Helpers */,
+				8E3C36FD295A374100EA6ADC /* Feed.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E3C36FC295A347C00EA6ADC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8E3C36FF295A375E00EA6ADC /* Shared UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Shared UI";
+			sourceTree = "<group>";
+		};
 		8EBD09932958EA1700767901 = {
 			isa = PBXGroup;
 			children = (
+				8E3C36F8295A33ED00EA6ADC /* RickAndMortyiOS */,
 				8EBD099F2958EA1700767901 /* RickAndMortyFeed */,
 				8EBD09AB2958EA1700767901 /* RickAndMortyFeedTests */,
 				8EBD099E2958EA1700767901 /* Products */,
@@ -406,6 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E3C36FE295A374100EA6ADC /* Feed.storyboard in Resources */,
 				8E3C36DD295A281B00EA6ADC /* Shared.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
