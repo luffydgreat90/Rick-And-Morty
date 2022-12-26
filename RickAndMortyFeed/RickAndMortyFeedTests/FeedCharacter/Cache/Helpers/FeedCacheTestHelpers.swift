@@ -15,7 +15,9 @@ func uniqueCharacter() -> FeedCharacter {
                  species: "Human",
                  gender: "Non-Binary",
                  image: anyURL(),
-                 url: anyURL())
+                 url: anyURL(),
+                 origin: "Earth",
+                 originURL: anyURL())
 }
 
 func uniqueCharacterFeed() -> (models: [FeedCharacter], local: [LocalFeedCharacter]) {

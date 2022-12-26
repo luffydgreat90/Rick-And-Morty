@@ -50,8 +50,8 @@ final class FeedItemMapperTests: XCTestCase {
     }
     
     
-    private func makeItem(id: Int, name: String = "Rick", status: String = "alive", species: String = "human", gender: String = "unknown", image: URL = anyURL(), url: URL = anyURL(), created: Date = Date()) -> (model: FeedCharacter, json: [String: Any]) {
-        let item = FeedCharacter(id: id, name: name, status: status, species: species, gender: gender, image: image, url: url)
+    private func makeItem(id: Int, name: String = "Rick", status: String = "alive", species: String = "human", gender: String = "unknown", image: URL = anyURL(), url: URL = anyURL(), created: Date = Date(), origin: String = "Earth", originURL: URL = anyURL()) -> (model: FeedCharacter, json: [String: Any]) {
+        let item = FeedCharacter(id: id, name: name, status: status, species: species, gender: gender, image: image, url: url, origin: origin, originURL: originURL)
         
         let json = [
             "id": id,
@@ -61,7 +61,11 @@ final class FeedItemMapperTests: XCTestCase {
             "gender": gender,
             "image": image.absoluteString,
             "url": url.absoluteString,
-            "created": "2017-11-04T18:48:46.250Z"
+            "created": "2017-11-04T18:48:46.250Z",
+            "origin": [
+                "name": origin,
+                "url": originURL.absoluteString
+            ]
         ].compactMapValues { $0 }
         
         return (item, json)

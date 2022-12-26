@@ -20,6 +20,11 @@ public enum FeedCharactersMapper {
         let gender: String
         let image: URL
         let url: URL
+        let origin: RemoteOrigin
+    }
+    private struct RemoteOrigin: Decodable {
+        let name: String
+        let url: URL
     }
     
     public enum Error: Swift.Error {
@@ -40,7 +45,9 @@ public enum FeedCharactersMapper {
                           species: $0.species,
                           gender: $0.gender,
                           image: $0.image,
-                          url: $0.url)
+                          url: $0.url,
+                          origin: $0.origin.name,
+                          originURL: $0.origin.url)
         }
     }
 }

@@ -15,8 +15,10 @@ public struct FeedCharacter: Hashable {
     public let gender: String
     public let image: URL
     public let url: URL
+    public let origin: String
+    public let originURL: URL
     
-    public init(id: Int, name: String, status: String, species: String, gender: String, image: URL, url: URL) {
+    public init(id: Int, name: String, status: String, species: String, gender: String, image: URL, url: URL, origin: String, originURL: URL) {
         self.id = id
         self.name = name
         self.status = status
@@ -24,5 +26,7 @@ public struct FeedCharacter: Hashable {
         self.gender = gender
         self.image = image
         self.url = url
+        self.origin = origin
+        self.originURL = originURL
     }
 }
