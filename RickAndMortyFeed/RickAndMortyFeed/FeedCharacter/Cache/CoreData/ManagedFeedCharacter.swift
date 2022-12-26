@@ -24,4 +24,21 @@ extension ManagedFeedCharacter {
     var local: LocalFeedCharacter {
         return LocalFeedCharacter(id: Int(id), name: name, status: status, species: species, gender: gender, image: image, url: url)
     }
+    
+    static func character(from localFeed: [LocalFeedCharacter], in context: NSManagedObjectContext) -> NSOrderedSet {
+        let images = NSOrderedSet(array: localFeed.map { local in
+            let managed = ManagedFeedCharacter(context: context)
+            managed.id = Int64(local.id)
+            managed.name = local.name
+            managed.gender = local.gender
+            managed.species = local.species
+            managed.status = local.status
+            managed.image = local.image
+            managed.url = local.url
+            managed.data = context.userInfo[local.url] as? Data
+            return managed
+        })
+        context.userInfo.removeAllObjects()
+        return images
+    }
 }

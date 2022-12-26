@@ -17,7 +17,14 @@ extension CoreDataFeedCharacterStore: FeedStore {
     }
     
     public func insert(_ feed: [LocalFeedCharacter], timestamp: Date) throws {
-       
+        try performSync { context in
+            Result {
+                let managedCache = try ManagedCache.newUniqueInstance(in: context)
+                managedCache.timestamp = timestamp
+                managedCache.feed = ManagedFeedCharacter.character(from: feed, in: context)
+                try context.save()
+            }
+        }
     }
     
     public func retrieve() throws -> CachedFeed? {
