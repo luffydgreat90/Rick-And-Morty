@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E3C36F4295A2F6100EA6ADC /* RickAndMortyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E3C36F3295A2F6100EA6ADC /* RickAndMortyFeed.framework */; };
+		8E3C36F5295A2F6100EA6ADC /* RickAndMortyFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E3C36F3295A2F6100EA6ADC /* RickAndMortyFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EBD09642958E82100767901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09632958E82100767901 /* AppDelegate.swift */; };
 		8EBD09662958E82100767901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09652958E82100767901 /* SceneDelegate.swift */; };
 		8EBD09682958E82100767901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09672958E82100767901 /* ViewController.swift */; };
@@ -35,7 +37,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8E3C36F6295A2F6100EA6ADC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8E3C36F5295A2F6100EA6ADC /* RickAndMortyFeed.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8E3C36F3295A2F6100EA6ADC /* RickAndMortyFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RickAndMortyFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09602958E82100767901 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09632958E82100767901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EBD09652958E82100767901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E3C36F4295A2F6100EA6ADC /* RickAndMortyFeed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E3C36F2295A2F6100EA6ADC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E3C36F3295A2F6100EA6ADC /* RickAndMortyFeed.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8EBD09572958E82100767901 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +109,7 @@
 				8EBD09792958E82300767901 /* RickAndMortyTests */,
 				8EBD09832958E82300767901 /* RickAndMortyUITests */,
 				8EBD09612958E82100767901 /* Products */,
+				8E3C36F2295A2F6100EA6ADC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +164,7 @@
 				8EBD095C2958E82100767901 /* Sources */,
 				8EBD095D2958E82100767901 /* Frameworks */,
 				8EBD095E2958E82100767901 /* Resources */,
+				8E3C36F6295A2F6100EA6ADC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -366,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
