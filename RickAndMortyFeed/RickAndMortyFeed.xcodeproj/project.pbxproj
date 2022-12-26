@@ -13,6 +13,7 @@
 		8E3C36C72959D66000EA6ADC /* XCTestCase+FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36C62959D66000EA6ADC /* XCTestCase+FeedStoreSpecs.swift */; };
 		8E3C36C92959D95900EA6ADC /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36C82959D95900EA6ADC /* FeedCacheTestHelpers.swift */; };
 		8E3C36CC2959E1C200EA6ADC /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36CB2959E1C200EA6ADC /* HTTPClient.swift */; };
+		8E3C36D0295A1A3C00EA6ADC /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36CF295A1A3C00EA6ADC /* URLSessionHTTPClient.swift */; };
 		8EBD09A82958EA1700767901 /* RickAndMortyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD099D2958EA1700767901 /* RickAndMortyFeed.framework */; };
 		8EBD09AD2958EA1700767901 /* FeedCharactersMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */; };
 		8EBD09BA2958F0AE00767901 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09B92958F0AE00767901 /* SharedTestHelpers.swift */; };
@@ -48,6 +49,7 @@
 		8E3C36C62959D66000EA6ADC /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		8E3C36C82959D95900EA6ADC /* FeedCacheTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCacheTestHelpers.swift; sourceTree = "<group>"; };
 		8E3C36CB2959E1C200EA6ADC /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		8E3C36CF295A1A3C00EA6ADC /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		8EBD099D2958EA1700767901 /* RickAndMortyFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RickAndMortyFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09A72958EA1700767901 /* RickAndMortyFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharactersMapperTests.swift; sourceTree = "<group>"; };
@@ -103,12 +105,29 @@
 			path = FeedStoreSpecs;
 			sourceTree = "<group>";
 		};
-		8E3C36CA2959E1AA00EA6ADC /* Shared API */ = {
+		8E3C36CA2959E1AA00EA6ADC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8E3C36CE295A1A3100EA6ADC /* API Infra */,
+				8E3C36CD295A1A2800EA6ADC /* API */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8E3C36CD295A1A2800EA6ADC /* API */ = {
 			isa = PBXGroup;
 			children = (
 				8E3C36CB2959E1C200EA6ADC /* HTTPClient.swift */,
 			);
-			path = "Shared API";
+			path = API;
+			sourceTree = "<group>";
+		};
+		8E3C36CE295A1A3100EA6ADC /* API Infra */ = {
+			isa = PBXGroup;
+			children = (
+				8E3C36CF295A1A3C00EA6ADC /* URLSessionHTTPClient.swift */,
+			);
+			path = "API Infra";
 			sourceTree = "<group>";
 		};
 		8EBD09932958EA1700767901 = {
@@ -132,7 +151,7 @@
 		8EBD099F2958EA1700767901 /* RickAndMortyFeed */ = {
 			isa = PBXGroup;
 			children = (
-				8E3C36CA2959E1AA00EA6ADC /* Shared API */,
+				8E3C36CA2959E1AA00EA6ADC /* Shared */,
 				8EBD09BC2958FB8F00767901 /* FeedCharacter */,
 			);
 			path = RickAndMortyFeed;
@@ -359,6 +378,7 @@
 				8EBD09C32958FCA000767901 /* FeedCharactersMapper.swift in Sources */,
 				8EBD09D02959011600767901 /* FeedCharacterStore.xcdatamodeld in Sources */,
 				8EBD09DB295910BB00767901 /* FeedStore.swift in Sources */,
+				8E3C36D0295A1A3C00EA6ADC /* URLSessionHTTPClient.swift in Sources */,
 				8EBD09DF295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift in Sources */,
 				8EBD09D52959044F00767901 /* CoreDataHelpers.swift in Sources */,
 				8EBD09CA2958FFFB00767901 /* HTTPURLResponse+StatusCode.swift in Sources */,
