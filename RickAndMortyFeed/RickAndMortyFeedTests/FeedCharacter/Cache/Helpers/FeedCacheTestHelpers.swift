@@ -17,7 +17,9 @@ func uniqueCharacter() -> FeedCharacter {
                  image: anyURL(),
                  url: anyURL(),
                  origin: "Earth",
-                 originURL: anyURL())
+                 originURL: anyURL(),
+                 location: "Citadel of Ricks",
+                 locationURL: anyURL())
 }
 
 func uniqueCharacterFeed() -> (models: [FeedCharacter], local: [LocalFeedCharacter]) {

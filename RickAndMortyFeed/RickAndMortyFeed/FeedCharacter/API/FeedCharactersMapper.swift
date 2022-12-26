@@ -21,8 +21,14 @@ public enum FeedCharactersMapper {
         let image: URL
         let url: URL
         let origin: RemoteOrigin
+        let location: RemoteLocation
     }
     private struct RemoteOrigin: Decodable {
+        let name: String
+        let url: URL
+    }
+    
+    private struct RemoteLocation: Decodable {
         let name: String
         let url: URL
     }
@@ -47,7 +53,9 @@ public enum FeedCharactersMapper {
                           image: $0.image,
                           url: $0.url,
                           origin: $0.origin.name,
-                          originURL: $0.origin.url)
+                          originURL: $0.origin.url,
+                          location: $0.location.name,
+                          locationURL: $0.location.url)
         }
     }
 }
