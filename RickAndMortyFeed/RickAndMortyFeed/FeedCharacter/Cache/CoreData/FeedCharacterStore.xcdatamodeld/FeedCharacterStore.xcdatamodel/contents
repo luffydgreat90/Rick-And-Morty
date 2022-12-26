@@ -9,7 +9,11 @@
         <attribute name="gender" attributeType="String"/>
         <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" attributeType="URI"/>
+        <attribute name="location" attributeType="String"/>
+        <attribute name="locationURL" attributeType="URI"/>
         <attribute name="name" attributeType="String"/>
+        <attribute name="origin" attributeType="String"/>
+        <attribute name="originURL" attributeType="URI"/>
         <attribute name="species" attributeType="String"/>
         <attribute name="status" attributeType="String"/>
         <attribute name="url" attributeType="URI"/>

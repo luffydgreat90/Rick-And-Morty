@@ -18,11 +18,15 @@ class ManagedFeedCharacter: NSManagedObject {
     @NSManaged var image: URL
     @NSManaged var url: URL
     @NSManaged var cache: ManagedCache
+    @NSManaged var origin: String
+    @NSManaged var originURL: URL
+    @NSManaged var location: String
+    @NSManaged var locationURL: URL
 }
 
 extension ManagedFeedCharacter {
     var local: LocalFeedCharacter {
-        return LocalFeedCharacter(id: Int(id), name: name, status: status, species: species, gender: gender, image: image, url: url)
+        return LocalFeedCharacter(id: Int(id), name: name, status: status, species: species, gender: gender, image: image, url: url, origin: origin, originURL: originURL, location: location, locationURL: locationURL)
     }
     
     static func character(from localFeed: [LocalFeedCharacter], in context: NSManagedObjectContext) -> NSOrderedSet {
@@ -36,6 +40,10 @@ extension ManagedFeedCharacter {
             managed.image = local.image
             managed.url = local.url
             managed.data = context.userInfo[local.url] as? Data
+            managed.origin = local.origin
+            managed.originURL = local.originURL
+            managed.location = local.location
+            managed.locationURL = local.locationURL
             return managed
         })
         context.userInfo.removeAllObjects()
