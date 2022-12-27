@@ -19,6 +19,13 @@ public struct CharacterCellController {
         self.delegate = dataSource
         self.dataSourcePrefetching = dataSource
     }
+    
+    public init(id: AnyHashable, _ dataSource: UITableViewDataSource) {
+        self.id = id
+        self.dataSource = dataSource
+        self.delegate = nil
+        self.dataSourcePrefetching = nil
+    }
 }
 
 extension CharacterCellController: Equatable {
