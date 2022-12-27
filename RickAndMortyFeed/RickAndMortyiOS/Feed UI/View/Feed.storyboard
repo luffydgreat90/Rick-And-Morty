@@ -18,20 +18,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FeedCharacterCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCharacterCell" id="ytt-li-WIM" customClass="FeedCharacterCell" customModule="RickAndMortyiOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="186"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="166"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ytt-li-WIM" id="qgE-y9-dia">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="186"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="166"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wtc-bZ-1Yl">
-                                            <rect key="frame" x="8" y="8" width="377" height="170"/>
+                                            <rect key="frame" x="8" y="8" width="377" height="150"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oc7-JL-4rH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cTF-O9-OoY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,22 +39,22 @@
                                                         <constraint firstAttribute="bottom" secondItem="cTF-O9-OoY" secondAttribute="bottom" id="21j-BS-60F"/>
                                                         <constraint firstItem="cTF-O9-OoY" firstAttribute="leading" secondItem="oc7-JL-4rH" secondAttribute="leading" id="RyE-UB-41n"/>
                                                         <constraint firstItem="cTF-O9-OoY" firstAttribute="top" secondItem="oc7-JL-4rH" secondAttribute="top" id="WRC-6o-j6V"/>
-                                                        <constraint firstAttribute="height" constant="170" id="iG6-2c-8EK"/>
+                                                        <constraint firstAttribute="height" constant="150" id="iG6-2c-8EK"/>
                                                         <constraint firstAttribute="trailing" secondItem="cTF-O9-OoY" secondAttribute="trailing" id="nmR-Wp-Aqe"/>
-                                                        <constraint firstAttribute="width" constant="150" id="xiL-MD-nhs"/>
+                                                        <constraint firstAttribute="width" constant="130" id="xiL-MD-nhs"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eo8-ZH-DkQ">
-                                                    <rect key="frame" x="158" y="0.0" width="219" height="170"/>
+                                                    <rect key="frame" x="138" y="0.0" width="239" height="150"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shA-xn-A3u">
-                                                            <rect key="frame" x="8" y="7.9999999999999982" width="203" height="20.333333333333329"/>
+                                                            <rect key="frame" x="8" y="7.9999999999999982" width="223" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5Y-rR-3V7">
-                                                            <rect key="frame" x="8" y="39.333333333333336" width="4" height="4"/>
+                                                            <rect key="frame" x="8" y="37.666666666666664" width="4" height="4"/>
                                                             <color key="backgroundColor" systemColor="labelColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="4" id="BVL-Ao-bDW"/>
@@ -62,32 +62,32 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQh-20-wO2">
-                                                            <rect key="frame" x="16" y="32.333333333333336" width="33" height="18"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <rect key="frame" x="15.999999999999998" y="32.333333333333336" width="27.333333333333329" height="14.333333333333336"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Known Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMN-i1-Zm8">
-                                                            <rect key="frame" x="8" y="58.333333333333336" width="203" height="20.333333333333336"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <rect key="frame" x="8" y="54.666666666666664" width="223" height="17.999999999999993"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" systemColor="systemGrayColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Citadel of Ricks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeX-g3-PlX">
-                                                            <rect key="frame" x="8" y="82.666666666666671" width="203" height="18"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <rect key="frame" x="8" y="76.666666666666671" width="223" height="14.333333333333329"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First seen in:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbd-nc-cKQ">
-                                                            <rect key="frame" x="8" y="108.66666666666667" width="203" height="20.333333333333329"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <rect key="frame" x="8" y="99" width="223" height="18"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" systemColor="systemGrayColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Ricklantis Mixup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy8-Z3-TyG">
-                                                            <rect key="frame" x="8" y="133" width="203" height="18"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <rect key="frame" x="8" y="120.99999999999999" width="223" height="14.333333333333329"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>

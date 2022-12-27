@@ -21,7 +21,10 @@ public final class FeedCharacterCellController: NSObject, UITableViewDataSource 
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: FeedCharacterCell = tableView.dequeueReusableCell()
-      
+        cell.nameLabel.text = model.name
+        cell.statusLabel.text = model.status
+        cell.locationLabel.text = model.location
+        cell.seenLabel.text = model.origin
         return cell
     }
     
