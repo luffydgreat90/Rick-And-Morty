@@ -13,9 +13,10 @@ import RickAndMortyiOS
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var cancel: Cancellable?
 
     private lazy var httpClient: HTTPClient = {
-        URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+        URLSessionHTTPClient(session: URLSession.shared)
     }()
     private lazy var baseURL = URL(string: "https://rickandmortyapi.com/api")!
     
@@ -32,6 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func configureWindow() {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        
     }
     
     private func makeRemoteFeedLoaderWithLocalFallback() -> AnyPublisher<[FeedCharacter], Error> {

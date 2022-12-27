@@ -20,6 +20,7 @@ public final class FeedViewController: UITableViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        onRefresh?()
     }
     
     private func configureTableView() {

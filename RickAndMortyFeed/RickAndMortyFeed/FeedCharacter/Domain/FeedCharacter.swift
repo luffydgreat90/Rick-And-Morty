@@ -16,11 +16,11 @@ public struct FeedCharacter: Hashable {
     public let image: URL
     public let url: URL
     public let origin: String
-    public let originURL: URL
+    public let originURL: URL?
     public let location: String
-    public let locationURL: URL
+    public let locationURL: URL?
     
-    public init(id: Int, name: String, status: String, species: String, gender: String, image: URL, url: URL, origin: String, originURL: URL, location: String, locationURL: URL) {
+    public init(id: Int, name: String, status: String, species: String, gender: String, image: URL, url: URL, origin: String, originURL: URL?, location: String, locationURL: URL?) {
         self.id = id
         self.name = name
         self.status = status

@@ -25,12 +25,12 @@ public enum FeedCharactersMapper {
     }
     private struct RemoteOrigin: Decodable {
         let name: String
-        let url: URL
+        let url: String
     }
     
     private struct RemoteLocation: Decodable {
         let name: String
-        let url: URL
+        let url: String
     }
     
     public enum Error: Swift.Error {
@@ -53,9 +53,9 @@ public enum FeedCharactersMapper {
                           image: $0.image,
                           url: $0.url,
                           origin: $0.origin.name,
-                          originURL: $0.origin.url,
+                          originURL: URL(string: $0.origin.url),
                           location: $0.location.name,
-                          locationURL: $0.location.url)
+                          locationURL: URL(string: $0.location.url))
         }
     }
 }
