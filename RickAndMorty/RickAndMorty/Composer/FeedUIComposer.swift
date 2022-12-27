@@ -7,9 +7,12 @@
 
 import UIKit
 import RickAndMortyFeed
-import RickAndMortyiOSTests
+import RickAndMortyiOS
 
 public final class FeedUIComposer {
-    private init() {}
+    private init() {
+        
+        
+    }
     
 }

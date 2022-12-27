@@ -16,19 +16,19 @@
 		8E3C36D0295A1A3C00EA6ADC /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36CF295A1A3C00EA6ADC /* URLSessionHTTPClient.swift */; };
 		8E3C36D6295A1FD000EA6ADC /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36D5295A1FD000EA6ADC /* URLProtocolStub.swift */; };
 		8E3C36D8295A243300EA6ADC /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36D7295A243300EA6ADC /* URLSessionHTTPClientTests.swift */; };
-		8E3C36FE295A374100EA6ADC /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3C36FD295A374100EA6ADC /* Feed.storyboard */; };
 		8E3C3708295A38D900EA6ADC /* RickAndMortyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD099D2958EA1700767901 /* RickAndMortyFeed.framework */; };
-		8E3C3712295A44ED00EA6ADC /* FeedCharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3711295A44ED00EA6ADC /* FeedCharacterCell.swift */; };
-		8E3C3714295A5EED00EA6ADC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3713295A5EED00EA6ADC /* FeedViewController.swift */; };
-		8E3C3716295A65B000EA6ADC /* CharacterCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3715295A65B000EA6ADC /* CharacterCellController.swift */; };
 		8E3C371C295A6E0900EA6ADC /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C371A295A6E0900EA6ADC /* LoadResourcePresenter.swift */; };
 		8E3C371E295A6E2C00EA6ADC /* Shared.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E3C3720295A6E2C00EA6ADC /* Shared.strings */; };
 		8E3C3723295A6E6400EA6ADC /* ResourceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3722295A6E6400EA6ADC /* ResourceLoadingView.swift */; };
 		8E3C3725295A6E8300EA6ADC /* ResourceErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3724295A6E8300EA6ADC /* ResourceErrorView.swift */; };
 		8E5D6ACE295AEF430044173F /* RickAndMortyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5D6AC6295AEF420044173F /* RickAndMortyiOS.framework */; };
-		8E5D6AE2295AF29A0044173F /* FeedCharacterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D6AE1295AF29A0044173F /* FeedCharacterPresenter.swift */; };
-		8E5D6AE4295AF3F80044173F /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D6AE3295AF3F80044173F /* FeedViewModel.swift */; };
-		8E5D6AE7295AF4420044173F /* FeedCharacter.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D6AE9295AF4420044173F /* FeedCharacter.strings */; };
+		8E5D6AF1295AF6100044173F /* FeedCharacterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D6AE1295AF29A0044173F /* FeedCharacterPresenter.swift */; };
+		8E5D6AF2295AF6140044173F /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D6AE3295AF3F80044173F /* FeedViewModel.swift */; };
+		8E5D6AF3295AF6170044173F /* FeedCharacter.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E5D6AE9295AF4420044173F /* FeedCharacter.strings */; };
+		8E5D6AF4295AF61C0044173F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3713295A5EED00EA6ADC /* FeedViewController.swift */; };
+		8E5D6AF5295AF6210044173F /* CharacterCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3715295A65B000EA6ADC /* CharacterCellController.swift */; };
+		8E5D6AF6295AF6250044173F /* FeedCharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C3711295A44ED00EA6ADC /* FeedCharacterCell.swift */; };
+		8E5D6AF7295AF62C0044173F /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3C36FD295A374100EA6ADC /* Feed.storyboard */; };
 		8EBD09A82958EA1700767901 /* RickAndMortyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD099D2958EA1700767901 /* RickAndMortyFeed.framework */; };
 		8EBD09AD2958EA1700767901 /* FeedCharactersMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */; };
 		8EBD09BA2958F0AE00767901 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09B92958F0AE00767901 /* SharedTestHelpers.swift */; };
@@ -605,9 +605,9 @@
 			projectRoot = "";
 			targets = (
 				8EBD099C2958EA1700767901 /* RickAndMortyFeed */,
+				8E5D6AC5295AEF420044173F /* RickAndMortyiOS */,
 				8EBD09A62958EA1700767901 /* RickAndMortyFeedTests */,
 				8E3C3703295A38D900EA6ADC /* RickAndMortyiOSTests */,
-				8E5D6AC5295AEF420044173F /* RickAndMortyiOS */,
 				8E5D6ACC295AEF430044173F /* RickAndMortyiOSTests */,
 			);
 		};
@@ -625,6 +625,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5D6AF7295AF62C0044173F /* Feed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,9 +640,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E3C36FE295A374100EA6ADC /* Feed.storyboard in Resources */,
 				8E3C371E295A6E2C00EA6ADC /* Shared.strings in Resources */,
-				8E5D6AE7295AF4420044173F /* FeedCharacter.strings in Resources */,
+				8E5D6AF3295AF6170044173F /* FeedCharacter.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +666,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5D6AF4295AF61C0044173F /* FeedViewController.swift in Sources */,
+				8E5D6AF5295AF6210044173F /* CharacterCellController.swift in Sources */,
+				8E5D6AF6295AF6250044173F /* FeedCharacterCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,17 +692,14 @@
 				8EBD09D02959011600767901 /* FeedCharacterStore.xcdatamodeld in Sources */,
 				8EBD09DB295910BB00767901 /* FeedStore.swift in Sources */,
 				8E3C36D0295A1A3C00EA6ADC /* URLSessionHTTPClient.swift in Sources */,
-				8E3C3714295A5EED00EA6ADC /* FeedViewController.swift in Sources */,
-				8E3C3712295A44ED00EA6ADC /* FeedCharacterCell.swift in Sources */,
 				8EBD09DF295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift in Sources */,
 				8E3C3723295A6E6400EA6ADC /* ResourceLoadingView.swift in Sources */,
-				8E5D6AE2295AF29A0044173F /* FeedCharacterPresenter.swift in Sources */,
+				8E5D6AF1295AF6100044173F /* FeedCharacterPresenter.swift in Sources */,
 				8EBD09D52959044F00767901 /* CoreDataHelpers.swift in Sources */,
 				8EBD09CA2958FFFB00767901 /* HTTPURLResponse+StatusCode.swift in Sources */,
-				8E5D6AE4295AF3F80044173F /* FeedViewModel.swift in Sources */,
+				8E5D6AF2295AF6140044173F /* FeedViewModel.swift in Sources */,
 				8E3C3725295A6E8300EA6ADC /* ResourceErrorView.swift in Sources */,
 				8EBD09D72959068000767901 /* ManagedCache.swift in Sources */,
-				8E3C3716295A65B000EA6ADC /* CharacterCellController.swift in Sources */,
 				8EBD09C12958FC1900767901 /* FeedCharacter.swift in Sources */,
 				8EBD09DD295910DC00767901 /* LocalFeedCharacter.swift in Sources */,
 			);
@@ -855,10 +855,11 @@
 		8E5D6AD9295AEF430044173F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.RickAndMortyiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -871,10 +872,11 @@
 		8E5D6ADA295AEF430044173F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.RickAndMortyiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
