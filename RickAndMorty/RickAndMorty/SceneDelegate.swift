@@ -21,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private lazy var baseURL = URL(string: "https://rickandmortyapi.com/api")!
     
     private lazy var navigationController = UINavigationController(
-        rootViewController: FeedUIComposer.feedComposedWith(feedLoader: makeRemoteFeedLoaderWithLocalFallback))
+        rootViewController: FeedUIComposer.feedComposedWith(feedLoader: makeRemoteFeedLoaderWithLocalFallback,
+                                                            imageLoader: makeLocalImageLoaderWithRemoteFallback))
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
@@ -43,5 +44,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .getPublisher(url: url)
             .tryMap(FeedCharactersMapper.map)
             .eraseToAnyPublisher()
+    }
+    
+    private func makeLocalImageLoaderWithRemoteFallback(url: URL) -> FeedImageDataLoader.Publisher {
+        return Future { promise in
+            promise(.failure(NSErrorDomain(string: "not yet") as! Error))
+        }.eraseToAnyPublisher()
     }
 }
