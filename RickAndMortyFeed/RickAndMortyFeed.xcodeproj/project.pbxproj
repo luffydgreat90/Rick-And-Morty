@@ -296,13 +296,6 @@
 			path = RickAndMortyiOS;
 			sourceTree = "<group>";
 		};
-		8E5D6AD1295AEF430044173F /* RickAndMortyiOSTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RickAndMortyiOSTests;
-			sourceTree = "<group>";
-		};
 		8E5D6AE0295AF2890044173F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,13 +306,20 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		8E5D6B02295B3E2E0044173F /* RickAndMortyiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RickAndMortyiOSTests;
+			sourceTree = "<group>";
+		};
 		8EBD09932958EA1700767901 = {
 			isa = PBXGroup;
 			children = (
+				8E5D6B02295B3E2E0044173F /* RickAndMortyiOSTests */,
 				8EBD099F2958EA1700767901 /* RickAndMortyFeed */,
 				8EBD09AB2958EA1700767901 /* RickAndMortyFeedTests */,
 				8E5D6AC7295AEF420044173F /* RickAndMortyiOS */,
-				8E5D6AD1295AEF430044173F /* RickAndMortyiOSTests */,
 				8EBD099E2958EA1700767901 /* Products */,
 			);
 			sourceTree = "<group>";
