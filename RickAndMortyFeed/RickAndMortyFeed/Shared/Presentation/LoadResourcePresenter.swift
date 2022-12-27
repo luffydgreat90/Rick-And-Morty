@@ -35,4 +35,23 @@ public final class LoadResourcePresenter<Resource, View: ResourceView> {
         self.errorView = errorView
         self.mapper = mapper
     }
+    
+    public func didStartLoading() {
+        errorView.display(.noError)
+        loadingView.display(ResourceLoadingViewModel(isLoading: true))
+    }
+    
+    public func didFinishLoading(with resource: Resource) {
+        do {
+            resourceView.display(try mapper(resource))
+            loadingView.display(ResourceLoadingViewModel(isLoading: false))
+        } catch {
+            didFinishLoading(with: error)
+        }
+    }
+
+    public func didFinishLoading(with error: Error) {
+        errorView.display(.error(message: Self.loadError))
+        loadingView.display(ResourceLoadingViewModel(isLoading: false))
+    }
 }

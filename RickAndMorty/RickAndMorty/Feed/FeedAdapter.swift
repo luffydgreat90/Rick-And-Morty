@@ -5,4 +5,6 @@
 //  Created by Marlon Ansale on 12/27/22.
 //
 
-import Foundation
+import UIKit
+import RickAndMortyFeed
+import RickAndMortyiOS
