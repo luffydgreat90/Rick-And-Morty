@@ -20,6 +20,10 @@ public final class FeedViewController: UITableViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        self.refresh()
+    }
+    
+    @IBAction private func refresh() {
         onRefresh?()
     }
     
