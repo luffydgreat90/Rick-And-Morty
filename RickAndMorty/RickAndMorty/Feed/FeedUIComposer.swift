@@ -10,9 +10,6 @@ import RickAndMortyFeed
 import RickAndMortyiOS
 
 public final class FeedUIComposer {
-    private init() {
-        
-        
-    }
+    private init() {}
     
 }
