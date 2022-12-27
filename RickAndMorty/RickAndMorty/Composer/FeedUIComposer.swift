@@ -9,3 +9,7 @@ import UIKit
 import RickAndMortyFeed
 import RickAndMortyiOSTests
 
+public final class FeedUIComposer {
+    private init() {}
+    
+}
