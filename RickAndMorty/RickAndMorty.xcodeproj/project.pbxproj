@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8E3C36F4295A2F6100EA6ADC /* RickAndMortyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E3C36F3295A2F6100EA6ADC /* RickAndMortyFeed.framework */; };
 		8E3C36F5295A2F6100EA6ADC /* RickAndMortyFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E3C36F3295A2F6100EA6ADC /* RickAndMortyFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8E5D6ADC295AEF8D0044173F /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D6ADB295AEF8D0044173F /* FeedUIComposer.swift */; };
+		8E5D6ADE295AEF9D0044173F /* RickAndMortyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5D6ADD295AEF9D0044173F /* RickAndMortyiOS.framework */; };
+		8E5D6ADF295AEF9D0044173F /* RickAndMortyiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5D6ADD295AEF9D0044173F /* RickAndMortyiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EBD09642958E82100767901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09632958E82100767901 /* AppDelegate.swift */; };
 		8EBD09662958E82100767901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09652958E82100767901 /* SceneDelegate.swift */; };
 		8EBD09682958E82100767901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09672958E82100767901 /* ViewController.swift */; };
@@ -45,6 +48,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8E3C36F5295A2F6100EA6ADC /* RickAndMortyFeed.framework in Embed Frameworks */,
+				8E5D6ADF295AEF9D0044173F /* RickAndMortyiOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		8E3C36F3295A2F6100EA6ADC /* RickAndMortyFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RickAndMortyFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E5D6ADB295AEF8D0044173F /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
+		8E5D6ADD295AEF9D0044173F /* RickAndMortyiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RickAndMortyiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09602958E82100767901 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09632958E82100767901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EBD09652958E82100767901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E3C36F4295A2F6100EA6ADC /* RickAndMortyFeed.framework in Frameworks */,
+				8E5D6ADE295AEF9D0044173F /* RickAndMortyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +104,7 @@
 		8E3C36F2295A2F6100EA6ADC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E5D6ADD295AEF9D0044173F /* RickAndMortyiOS.framework */,
 				8E3C36F3295A2F6100EA6ADC /* RickAndMortyFeed.framework */,
 			);
 			name = Frameworks;
@@ -105,6 +113,7 @@
 		8E3C36F7295A33DA00EA6ADC /* Composer */ = {
 			isa = PBXGroup;
 			children = (
+				8E5D6ADB295AEF8D0044173F /* FeedUIComposer.swift */,
 			);
 			path = Composer;
 			sourceTree = "<group>";
@@ -295,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EBD09682958E82100767901 /* ViewController.swift in Sources */,
+				8E5D6ADC295AEF8D0044173F /* FeedUIComposer.swift in Sources */,
 				8EBD09642958E82100767901 /* AppDelegate.swift in Sources */,
 				8EBD09662958E82100767901 /* SceneDelegate.swift in Sources */,
 			);
