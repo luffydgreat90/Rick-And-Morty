@@ -43,7 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
-
+    
         window = UIWindow(windowScene: scene)
         configureWindow()
     }
@@ -65,8 +65,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeLocalImageLoaderWithRemoteFallback(url: URL) -> ImageDataLoader.Publisher {
-        return Future { promise in
+        
+    
+        return Deferred { Future { promise in
             promise(.failure(NSErrorDomain(string: "not yet") as! Error))
+        }
+            
         }.eraseToAnyPublisher()
     }
 }

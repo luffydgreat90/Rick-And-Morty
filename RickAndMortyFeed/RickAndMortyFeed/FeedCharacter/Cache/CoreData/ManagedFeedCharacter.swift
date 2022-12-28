@@ -49,4 +49,18 @@ extension ManagedFeedCharacter {
         context.userInfo.removeAllObjects()
         return images
     }
+    
+    static func first(with url: URL, in context: NSManagedObjectContext) throws -> ManagedFeedCharacter? {
+        let request = NSFetchRequest<ManagedFeedCharacter>(entityName: entity().name!)
+        request.predicate = NSPredicate(format: "%K = %@", argumentArray: [#keyPath(ManagedFeedCharacter.url), url])
+        request.returnsObjectsAsFaults = false
+        request.fetchLimit = 1
+        return try context.fetch(request).first
+    }
+    
+    static func data(with url: URL, in context: NSManagedObjectContext) throws -> Data? {
+        if let data = context.userInfo[url] as? Data { return data }
+        
+        return try first(with: url, in: context)?.data
+    }
 }
