@@ -50,6 +50,7 @@
 		8EBD09DF295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09DE295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift */; };
 		8EDF275A295C49530018D0F9 /* ImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2759295C49530018D0F9 /* ImageDataMapper.swift */; };
 		8EDF275D295C4B410018D0F9 /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF275C295C4B410018D0F9 /* UIRefreshControl+Helpers.swift */; };
+		8EDF275F295C56940018D0F9 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF275E295C56940018D0F9 /* LocalFeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		8EBD09DE295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedCharacterStore+FeedStore.swift"; sourceTree = "<group>"; };
 		8EDF2759295C49530018D0F9 /* ImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataMapper.swift; sourceTree = "<group>"; };
 		8EDF275C295C4B410018D0F9 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
+		8EDF275E295C56940018D0F9 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,6 +449,7 @@
 				8EBD09D12959038700767901 /* CoreData */,
 				8EBD09DA295910BB00767901 /* FeedStore.swift */,
 				8EBD09DC295910DC00767901 /* LocalFeedCharacter.swift */,
+				8EDF275E295C56940018D0F9 /* LocalFeedLoader.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDF275F295C56940018D0F9 /* LocalFeedLoader.swift in Sources */,
 				8E5D6B0A295B8AA90044173F /* ImageDataLoader.swift in Sources */,
 				8E3C371C295A6E0900EA6ADC /* LoadResourcePresenter.swift in Sources */,
 				8EBD09D3295903A100767901 /* CoreDataFeedCharacterStore.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import CoreData
 import RickAndMortyFeed
 import RickAndMortyiOS
 
@@ -23,7 +24,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private lazy var navigationController = UINavigationController(
         rootViewController: FeedUIComposer.feedComposedWith(feedLoader: makeRemoteFeedLoaderWithLocalFallback,
                                                             imageLoader: makeLocalImageLoaderWithRemoteFallback))
+    
+    private lazy var store: FeedStore = {
+        do {
+            return try CoreDataFeedCharacterStore(
+                storeURL: NSPersistentContainer
+                    .defaultDirectoryURL()
+                    .appendingPathComponent("feed-character-store.sqlite"))
+        } catch {
+            fatalError("Failed to instantiate CoreData store with error: \(error.localizedDescription)")
+        }
+    }()
 
+    private lazy var localFeedLoader: LocalFeedLoader = {
+        LocalFeedLoader(store: store, currentDate: Date.init)
+    }()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
 
@@ -44,6 +60,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .getPublisher(url: url)
             .tryMap(FeedCharactersMapper.map)
             .eraseToAnyPublisher()
+            
     }
     
     private func makeLocalImageLoaderWithRemoteFallback(url: URL) -> ImageDataLoader.Publisher {
