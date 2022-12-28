@@ -48,6 +48,7 @@
 		8EBD09DB295910BB00767901 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09DA295910BB00767901 /* FeedStore.swift */; };
 		8EBD09DD295910DC00767901 /* LocalFeedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09DC295910DC00767901 /* LocalFeedCharacter.swift */; };
 		8EBD09DF295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09DE295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift */; };
+		8EDF275A295C49530018D0F9 /* ImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2759295C49530018D0F9 /* ImageDataMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		8EBD09DA295910BB00767901 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		8EBD09DC295910DC00767901 /* LocalFeedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedCharacter.swift; sourceTree = "<group>"; };
 		8EBD09DE295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedCharacterStore+FeedStore.swift"; sourceTree = "<group>"; };
+		8EDF2759295C49530018D0F9 /* ImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				8E3C36CB2959E1C200EA6ADC /* HTTPClient.swift */,
+				8EDF2759295C49530018D0F9 /* ImageDataMapper.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 				8E5D6AF1295AF6100044173F /* FeedCharacterPresenter.swift in Sources */,
 				8EBD09D52959044F00767901 /* CoreDataHelpers.swift in Sources */,
 				8EBD09CA2958FFFB00767901 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				8EDF275A295C49530018D0F9 /* ImageDataMapper.swift in Sources */,
 				8E5D6AF2295AF6140044173F /* FeedViewModel.swift in Sources */,
 				8E3C3725295A6E8300EA6ADC /* ResourceErrorView.swift in Sources */,
 				8EBD09D72959068000767901 /* ManagedCache.swift in Sources */,
