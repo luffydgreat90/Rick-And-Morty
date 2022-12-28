@@ -14,8 +14,13 @@ import RickAndMortyiOS
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var cancel: Cancellable?
 
+    private lazy var scheduler: AnyDispatchQueueScheduler = DispatchQueue(
+        label: "com.essentialdeveloper.infra.queue",
+        qos: .userInitiated,
+        attributes: .concurrent
+    ).eraseToAnyScheduler()
+    
     private lazy var httpClient: HTTPClient = {
         URLSessionHTTPClient(session: URLSession.shared)
     }()
@@ -26,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         rootViewController: FeedUIComposer.feedComposedWith(feedLoader: makeRemoteFeedLoaderWithLocalFallback,
                                                             imageLoader: makeLocalImageLoaderWithRemoteFallback))
     
-    private lazy var store: FeedStore = {
+    private lazy var store: FeedStore & ImageDataStore = {
         do {
             return try CoreDataFeedCharacterStore(
                 storeURL: NSPersistentContainer
@@ -65,12 +70,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func makeLocalImageLoaderWithRemoteFallback(url: URL) -> ImageDataLoader.Publisher {
-        
+        let localImageLoader = LocalFeedImageDataLoader(store: store)
     
-        return Deferred { Future { promise in
-            promise(.failure(NSErrorDomain(string: "not yet") as! Error))
-        }
-            
-        }.eraseToAnyPublisher()
+        return localImageLoader.loadImageDataPublisher(from: url)
+            .fallback { [httpClient, scheduler] in
+                httpClient.getPublisher(url: url)
+                    .tryMap(ImageDataMapper.map)
+                    .caching(to: localImageLoader, using: url)
+                    .subscribe(on: scheduler)
+                    .eraseToAnyPublisher()
+            }.subscribe(on: scheduler)
+            .eraseToAnyPublisher()
     }
 }

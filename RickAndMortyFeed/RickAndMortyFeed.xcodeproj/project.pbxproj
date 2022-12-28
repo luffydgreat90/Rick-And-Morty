@@ -53,6 +53,7 @@
 		8EDF275F295C56940018D0F9 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF275E295C56940018D0F9 /* LocalFeedLoader.swift */; };
 		8EDF2763295CBE070018D0F9 /* ImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2762295CBE070018D0F9 /* ImageDataStore.swift */; };
 		8EDF2765295CBE7B0018D0F9 /* CoreDataFeedCharacterStore+ImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2764295CBE7B0018D0F9 /* CoreDataFeedCharacterStore+ImageDataStore.swift */; };
+		8EDF2767295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2766295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		8EDF275E295C56940018D0F9 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		8EDF2762295CBE070018D0F9 /* ImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataStore.swift; sourceTree = "<group>"; };
 		8EDF2764295CBE7B0018D0F9 /* CoreDataFeedCharacterStore+ImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedCharacterStore+ImageDataStore.swift"; sourceTree = "<group>"; };
+		8EDF2766295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -455,6 +457,7 @@
 				8EBD09DC295910DC00767901 /* LocalFeedCharacter.swift */,
 				8EDF275E295C56940018D0F9 /* LocalFeedLoader.swift */,
 				8EDF2762295CBE070018D0F9 /* ImageDataStore.swift */,
+				8EDF2766295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -737,6 +740,7 @@
 				8EDF2765295CBE7B0018D0F9 /* CoreDataFeedCharacterStore+ImageDataStore.swift in Sources */,
 				8EDF275F295C56940018D0F9 /* LocalFeedLoader.swift in Sources */,
 				8E5D6B0A295B8AA90044173F /* ImageDataLoader.swift in Sources */,
+				8EDF2767295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift in Sources */,
 				8E3C371C295A6E0900EA6ADC /* LoadResourcePresenter.swift in Sources */,
 				8EBD09D3295903A100767901 /* CoreDataFeedCharacterStore.swift in Sources */,
 				8EBD09C52958FE0F00767901 /* FeedEndpoint.swift in Sources */,
