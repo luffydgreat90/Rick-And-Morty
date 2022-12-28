@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private lazy var httpClient: HTTPClient = {
         URLSessionHTTPClient(session: URLSession.shared)
     }()
+    
     private lazy var baseURL = URL(string: "https://rickandmortyapi.com/api")!
     
     private lazy var navigationController = UINavigationController(

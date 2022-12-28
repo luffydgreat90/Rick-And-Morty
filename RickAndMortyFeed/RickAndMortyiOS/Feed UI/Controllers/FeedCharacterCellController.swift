@@ -8,11 +8,18 @@
 import UIKit
 import RickAndMortyFeed
 
+public protocol FeedImageCellControllerDelegate {
+    func didRequestImage()
+    func didCancelImageRequest()
+}
+
 public final class FeedCharacterCellController: NSObject, UITableViewDataSource {
     private let model: FeedCharacter
-
-    public init(model: FeedCharacter) {
+    private let delegate: FeedImageCellControllerDelegate
+    public typealias ResourceViewModel = UIImage
+    public init(model: FeedCharacter, delegate: FeedImageCellControllerDelegate) {
         self.model = model
+        self.delegate = delegate
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,9 +32,25 @@ public final class FeedCharacterCellController: NSObject, UITableViewDataSource 
         cell.statusLabel.text = model.status
         cell.locationLabel.text = model.location
         cell.seenLabel.text = model.origin
+        cell.feedImageView.image = nil
         return cell
     }
     
 }
 
+extension FeedCharacterCellController: ResourceView, ResourceLoadingView, ResourceErrorView {
+    public func display(_ viewModel: UIImage) {
+        
+    }
+    
+    public func display(_ viewModel: RickAndMortyFeed.ResourceLoadingViewModel) {
+        
+    }
+    
+    public func display(_ viewModel: RickAndMortyFeed.ResourceErrorViewModel) {
+        
+    }
+    
+    
+}
 

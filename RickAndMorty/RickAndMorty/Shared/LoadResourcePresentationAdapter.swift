@@ -37,3 +37,13 @@ final class LoadResourcePresentationAdapter<Resource, View: ResourceView> {
         
     }
 }
+
+extension LoadResourcePresentationAdapter: FeedImageCellControllerDelegate {
+    func didRequestImage() {
+        
+    }
+    func didCancelImageRequest() {
+        
+    }
+
+}
