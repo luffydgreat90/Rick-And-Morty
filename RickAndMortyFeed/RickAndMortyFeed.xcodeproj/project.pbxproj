@@ -49,6 +49,7 @@
 		8EBD09DD295910DC00767901 /* LocalFeedCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09DC295910DC00767901 /* LocalFeedCharacter.swift */; };
 		8EBD09DF295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09DE295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift */; };
 		8EDF275A295C49530018D0F9 /* ImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2759295C49530018D0F9 /* ImageDataMapper.swift */; };
+		8EDF275D295C4B410018D0F9 /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF275C295C4B410018D0F9 /* UIRefreshControl+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		8EBD09DC295910DC00767901 /* LocalFeedCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedCharacter.swift; sourceTree = "<group>"; };
 		8EBD09DE295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedCharacterStore+FeedStore.swift"; sourceTree = "<group>"; };
 		8EDF2759295C49530018D0F9 /* ImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataMapper.swift; sourceTree = "<group>"; };
+		8EDF275C295C4B410018D0F9 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 		8E3C36CA2959E1AA00EA6ADC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8EDF275B295C4A860018D0F9 /* Domain */,
 				8E3C3719295A6DF300EA6ADC /* Presentation */,
 				8E3C36CE295A1A3100EA6ADC /* API Infra */,
 				8E3C36CD295A1A2800EA6ADC /* API */,
@@ -328,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				8E5D6B07295B549E0044173F /* UITableView+Dequeueing.swift */,
+				8EDF275C295C4B410018D0F9 /* UIRefreshControl+Helpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -478,6 +482,13 @@
 				8EBD09DE295915F800767901 /* CoreDataFeedCharacterStore+FeedStore.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8EDF275B295C4A860018D0F9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -697,6 +708,7 @@
 				8E5D6AF4295AF61C0044173F /* FeedViewController.swift in Sources */,
 				8E5D6AF5295AF6210044173F /* CharacterCellController.swift in Sources */,
 				8E5D6AF6295AF6250044173F /* FeedCharacterCell.swift in Sources */,
+				8EDF275D295C4B410018D0F9 /* UIRefreshControl+Helpers.swift in Sources */,
 				8E5D6B08295B549E0044173F /* UITableView+Dequeueing.swift in Sources */,
 				8E5D6B04295B40FA0044173F /* FeedCharacterCellController.swift in Sources */,
 			);

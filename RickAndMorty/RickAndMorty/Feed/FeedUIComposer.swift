@@ -24,8 +24,6 @@ public final class FeedUIComposer {
         let viewController = makeCommentsViewController(title: FeedCharacterPresenter.title)
         viewController.onRefresh = adapter.loadResource
         adapter.presenter = LoadResourcePresenter(
-            
-            
             resourceView: FeedViewAdapter(controller: viewController,
                                           imageLoader: imageLoader),
                                           loadingView: WeakRefVirtualProxy(viewController),

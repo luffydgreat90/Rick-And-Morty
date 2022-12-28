@@ -42,7 +42,7 @@ public final class FeedViewController: UITableViewController {
 
 extension FeedViewController: ResourceLoadingView {
     public func display(_ viewModel: RickAndMortyFeed.ResourceLoadingViewModel) {
-        
+        refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
 }
 
