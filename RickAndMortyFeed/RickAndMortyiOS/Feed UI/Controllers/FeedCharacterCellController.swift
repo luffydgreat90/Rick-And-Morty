@@ -13,7 +13,8 @@ public protocol FeedImageCellControllerDelegate {
     func didCancelImageRequest()
 }
 
-public final class FeedCharacterCellController: NSObject, UITableViewDataSource {
+public final class FeedCharacterCellController: NSObject, UITableViewDataSource, UITableViewDelegate, UITableViewDataSourcePrefetching {
+    
     private let model: FeedCharacter
     private let delegate: FeedImageCellControllerDelegate
     public typealias ResourceViewModel = UIImage
@@ -34,6 +35,10 @@ public final class FeedCharacterCellController: NSObject, UITableViewDataSource 
         cell.seenLabel.text = model.origin
         cell.feedImageView.image = nil
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        delegate.didRequestImage()
     }
     
 }
