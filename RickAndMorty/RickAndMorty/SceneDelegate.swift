@@ -46,7 +46,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .eraseToAnyPublisher()
     }
     
-    private func makeLocalImageLoaderWithRemoteFallback(url: URL) -> FeedImageDataLoader.Publisher {
+    private func makeLocalImageLoaderWithRemoteFallback(url: URL) -> ImageDataLoader.Publisher {
         return Future { promise in
             promise(.failure(NSErrorDomain(string: "not yet") as! Error))
         }.eraseToAnyPublisher()

@@ -25,7 +25,7 @@ public extension HTTPClient {
     }
 }
 
-public extension FeedImageDataLoader {
+public extension ImageDataLoader {
     typealias Publisher = AnyPublisher<Data, Error>
     
     func loadImageDataPublisher(from url: URL) -> Publisher {
