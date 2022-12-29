@@ -10,25 +10,24 @@ import Combine
 import RickAndMortyFeed
 import RickAndMortyiOS
 
-public final class FeedUIComposer {
-    private init() {}
-    
+
+
+public enum FeedUIComposer {
     private typealias FeedsPresentationAdapter = LoadResourcePresentationAdapter<[FeedCharacter], FeedViewAdapter>
     
-    public static func feedComposedWith(
+    public static func feedComposeWith(
         feedLoader: @escaping () -> AnyPublisher<[FeedCharacter], Error>,
-        imageLoader: @escaping (URL) -> ImageDataLoader.Publisher
+        imageLoader: @escaping (URL) -> AnyPublisher<Data, Error>
     ) -> FeedViewController {
-        
-        let adapter = FeedsPresentationAdapter(loader: feedLoader)
         let viewController = makeCommentsViewController(title: FeedCharacterPresenter.title)
+        let adapter = FeedsPresentationAdapter(loader: feedLoader)
         viewController.onRefresh = adapter.loadResource
-        adapter.presenter = LoadResourcePresenter(
-            resourceView: FeedViewAdapter(controller: viewController,
-                                          imageLoader: imageLoader),
-                                          loadingView: WeakRefVirtualProxy(viewController),
-                                          errorView: WeakRefVirtualProxy(viewController),
-                                          mapper: { FeedCharacterPresenter.map($0)})
+        adapter.presenter = LoadResourcePresenter(resourceView: FeedViewAdapter(
+            controller: viewController,
+            imageLoader: imageLoader
+            ), loadingView: WeakRefVirtualProxy(viewController),
+               errorView: WeakRefVirtualProxy(viewController),
+               mapper: { FeedCharacterPresenter.map($0) })
         
         return viewController
     }

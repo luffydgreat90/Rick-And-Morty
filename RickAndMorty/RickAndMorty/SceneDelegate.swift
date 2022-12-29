@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private lazy var baseURL = URL(string: "https://rickandmortyapi.com/api")!
     
     private lazy var navigationController = UINavigationController(
-        rootViewController: FeedUIComposer.feedComposedWith(feedLoader: makeRemoteFeedLoaderWithLocalFallback,
+        rootViewController: FeedUIComposer.feedComposeWith(feedLoader: makeRemoteFeedLoaderWithLocalFallback,
                                                             imageLoader: makeLocalImageLoaderWithRemoteFallback))
     
     private lazy var store: FeedStore & ImageDataStore = {
