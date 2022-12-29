@@ -31,11 +31,7 @@ public final class FeedCharacterCellController: NSObject, UITableViewDataSource,
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         cell = tableView.dequeueReusableCell()
-        cell?.nameLabel.text = model.name
-        cell?.statusLabel.text = model.status
-        cell?.locationLabel.text = model.location
-        cell?.seenLabel.text = model.origin
-        cell?.feedImageView.image = nil
+        cell?.bind(model: model)
         delegate.didRequestImage()
         return cell!
     }
@@ -44,6 +40,7 @@ public final class FeedCharacterCellController: NSObject, UITableViewDataSource,
         delegate.didRequestImage()
     }
     
+
 }
 
 extension FeedCharacterCellController: ResourceView, ResourceLoadingView, ResourceErrorView {
@@ -51,11 +48,11 @@ extension FeedCharacterCellController: ResourceView, ResourceLoadingView, Resour
         cell?.feedImageView.image = viewModel
     }
     
-    public func display(_ viewModel: RickAndMortyFeed.ResourceLoadingViewModel) {
+    public func display(_ viewModel: ResourceLoadingViewModel) {
         
     }
     
-    public func display(_ viewModel: RickAndMortyFeed.ResourceErrorViewModel) {
+    public func display(_ viewModel: ResourceErrorViewModel) {
         
     }
     
