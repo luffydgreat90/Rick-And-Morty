@@ -23,11 +23,15 @@ final class FeedViewAdapter: ResourceView {
     
     func display(_ viewModel: FeedViewModel) {
         controller?.display(viewModel.feed.map { viewModel in
-            CharacterCellController(id: viewModel,
-                FeedCharacterCellController(model: viewModel,
-                                         delegate: ImageDataPresentationAdapter.init(loader: { [imageLoader] in
-                                                imageLoader(viewModel.url)
-            })))
+            
+            let feedCharacterCell = FeedCharacterCellController(model: viewModel,
+                                                        delegate: ImageDataPresentationAdapter.init(loader: { [imageLoader] in
+                                                              return  imageLoader(viewModel.image)
+                           }))
+            
+           
+           
+            return CharacterCellController(id: viewModel,feedCharacterCell)
         })
     }
 }
