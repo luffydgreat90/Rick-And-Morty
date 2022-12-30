@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E2AF096295FAE9400FBF2F9 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2AF095295FAE9400FBF2F9 /* CharacterViewController.swift */; };
 		8E3C36BF2959C9CF00EA6ADC /* CoreDataFeedCharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36BE2959C9CF00EA6ADC /* CoreDataFeedCharacterTests.swift */; };
 		8E3C36C22959D11F00EA6ADC /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36C12959D11F00EA6ADC /* XCTestCase+MemoryLeakTracking.swift */; };
 		8E3C36C52959D60600EA6ADC /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3C36C42959D60600EA6ADC /* FeedStoreSpecs.swift */; };
@@ -83,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E2AF095295FAE9400FBF2F9 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		8E3C36BE2959C9CF00EA6ADC /* CoreDataFeedCharacterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedCharacterTests.swift; sourceTree = "<group>"; };
 		8E3C36C12959D11F00EA6ADC /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		8E3C36C42959D60600EA6ADC /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
@@ -521,6 +523,7 @@
 		8EDF2770295F169E0018D0F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E2AF095295FAE9400FBF2F9 /* CharacterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -744,6 +747,7 @@
 				8EDF276D295F04830018D0F9 /* UIImageView+Animations.swift in Sources */,
 				8E5D6AF5295AF6210044173F /* CharacterCellController.swift in Sources */,
 				8E5D6AF6295AF6250044173F /* FeedCharacterCell.swift in Sources */,
+				8E2AF096295FAE9400FBF2F9 /* CharacterViewController.swift in Sources */,
 				8EDF275D295C4B410018D0F9 /* UIRefreshControl+Helpers.swift in Sources */,
 				8E5D6B08295B549E0044173F /* UITableView+Dequeueing.swift in Sources */,
 				8E5D6B04295B40FA0044173F /* FeedCharacterCellController.swift in Sources */,
