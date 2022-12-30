@@ -54,6 +54,7 @@
 		8EDF2763295CBE070018D0F9 /* ImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2762295CBE070018D0F9 /* ImageDataStore.swift */; };
 		8EDF2765295CBE7B0018D0F9 /* CoreDataFeedCharacterStore+ImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2764295CBE7B0018D0F9 /* CoreDataFeedCharacterStore+ImageDataStore.swift */; };
 		8EDF2767295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2766295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift */; };
+		8EDF276D295F04830018D0F9 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF276C295F04830018D0F9 /* UIImageView+Animations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		8EDF2762295CBE070018D0F9 /* ImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataStore.swift; sourceTree = "<group>"; };
 		8EDF2764295CBE7B0018D0F9 /* CoreDataFeedCharacterStore+ImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedCharacterStore+ImageDataStore.swift"; sourceTree = "<group>"; };
 		8EDF2766295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
+		8EDF276C295F04830018D0F9 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 		8E3C36FC295A347C00EA6ADC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8EDF276C295F04830018D0F9 /* UIImageView+Animations.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E5D6AF4295AF61C0044173F /* FeedViewController.swift in Sources */,
+				8EDF276D295F04830018D0F9 /* UIImageView+Animations.swift in Sources */,
 				8E5D6AF5295AF6210044173F /* CharacterCellController.swift in Sources */,
 				8E5D6AF6295AF6250044173F /* FeedCharacterCell.swift in Sources */,
 				8EDF275D295C4B410018D0F9 /* UIRefreshControl+Helpers.swift in Sources */,
