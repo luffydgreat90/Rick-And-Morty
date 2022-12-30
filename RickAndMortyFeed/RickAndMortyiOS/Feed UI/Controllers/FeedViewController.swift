@@ -47,7 +47,7 @@ extension FeedViewController: ResourceLoadingView {
 }
 
 extension FeedViewController: ResourceErrorView {
-    public func display(_ viewModel: RickAndMortyFeed.ResourceErrorViewModel) {
+    public func display(_ viewModel: ResourceErrorViewModel) {
     
     }
 }

@@ -45,7 +45,7 @@ public final class FeedCharacterCellController: NSObject, UITableViewDataSource,
 
 extension FeedCharacterCellController: ResourceView, ResourceLoadingView, ResourceErrorView {
     public func display(_ viewModel: UIImage) {
-        cell?.feedImageView.image = viewModel
+        cell?.feedImageView.setImageAnimated(viewModel)
     }
     
     public func display(_ viewModel: ResourceLoadingViewModel) {

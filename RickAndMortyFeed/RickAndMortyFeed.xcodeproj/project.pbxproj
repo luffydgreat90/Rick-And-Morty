@@ -55,6 +55,7 @@
 		8EDF2765295CBE7B0018D0F9 /* CoreDataFeedCharacterStore+ImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2764295CBE7B0018D0F9 /* CoreDataFeedCharacterStore+ImageDataStore.swift */; };
 		8EDF2767295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2766295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift */; };
 		8EDF276D295F04830018D0F9 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF276C295F04830018D0F9 /* UIImageView+Animations.swift */; };
+		8EDF2772295F18180018D0F9 /* Character.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EDF2771295F18180018D0F9 /* Character.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		8EDF2764295CBE7B0018D0F9 /* CoreDataFeedCharacterStore+ImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedCharacterStore+ImageDataStore.swift"; sourceTree = "<group>"; };
 		8EDF2766295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		8EDF276C295F04830018D0F9 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
+		8EDF2771295F18180018D0F9 /* Character.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Character.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,16 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				8E5D6B06295B54880044173F /* Views */,
-				8E3C3710295A3C2E00EA6ADC /* Controllers */,
 			);
 			path = "Shared UI";
-			sourceTree = "<group>";
-		};
-		8E3C3710295A3C2E00EA6ADC /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		8E3C3719295A6DF300EA6ADC /* Presentation */ = {
@@ -315,6 +309,7 @@
 		8E5D6AC7295AEF420044173F /* RickAndMortyiOS */ = {
 			isa = PBXGroup;
 			children = (
+				8EDF276E295F15C30018D0F9 /* Character UI */,
 				8E3C36FF295A375E00EA6ADC /* Shared UI */,
 				8E3C36F9295A345B00EA6ADC /* Feed UI */,
 			);
@@ -506,6 +501,30 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		8EDF276E295F15C30018D0F9 /* Character UI */ = {
+			isa = PBXGroup;
+			children = (
+				8EDF2770295F169E0018D0F9 /* Controllers */,
+				8EDF276F295F16910018D0F9 /* View */,
+			);
+			path = "Character UI";
+			sourceTree = "<group>";
+		};
+		8EDF276F295F16910018D0F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8EDF2771295F18180018D0F9 /* Character.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8EDF2770295F169E0018D0F9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -679,6 +698,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDF2772295F18180018D0F9 /* Character.storyboard in Resources */,
 				8E5D6AF7295AF62C0044173F /* Feed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
