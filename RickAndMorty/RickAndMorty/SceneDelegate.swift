@@ -30,7 +30,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private lazy var navigationController = UINavigationController(
         rootViewController: FeedUIComposer.feedComposeWith(
             feedLoader: makeRemoteFeedLoaderWithLocalFallback,
-            imageLoader: makeLocalImageLoaderWithRemoteFallback))
+            imageLoader: makeLocalImageLoaderWithRemoteFallback,
+            selection:showCharacter))
     
     private lazy var store: FeedStore & ImageDataStore = {
         do {
@@ -58,6 +59,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
+    }
+    
+    private func showCharacter(for character: FeedCharacter) {
+        let viewModel = CharacterViewModel(title: character.name, status: character.status)
+        let viewController = CharacterUIComposer.characterComposeWith(character: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     private func makeRemoteFeedLoaderWithLocalFallback() -> AnyPublisher<[FeedCharacter], Error> {

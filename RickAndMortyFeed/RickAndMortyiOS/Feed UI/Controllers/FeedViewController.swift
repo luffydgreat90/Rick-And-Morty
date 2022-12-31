@@ -38,6 +38,15 @@ public final class FeedViewController: UITableViewController {
         snapshot.appendItems(cellControllers, toSection: 0)
         dataSource.apply(snapshot)
     }
+    
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dl = cellController(at: indexPath)?.delegate
+        dl?.tableView?(tableView, didSelectRowAt: indexPath)
+    }
+    
+    private func cellController(at indexPath: IndexPath) -> CharacterCellController? {
+        dataSource.itemIdentifier(for: indexPath)
+    }
 }
 
 extension FeedViewController: ResourceLoadingView {

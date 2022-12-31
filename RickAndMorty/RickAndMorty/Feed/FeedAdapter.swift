@@ -32,8 +32,10 @@ final class FeedViewAdapter: ResourceView {
                 imageLoader(viewModel.image) })
             
             
-            let feedCharacterCell = FeedCharacterCellController(model: viewModel,
-                                                        delegate: imagePresenter)
+            let feedCharacterCell = FeedCharacterCellController(
+                model: viewModel,
+                delegate: imagePresenter,
+                selection: selection)
             
             imagePresenter.presenter = LoadResourcePresenter(
                 resourceView: WeakRefVirtualProxy(feedCharacterCell),

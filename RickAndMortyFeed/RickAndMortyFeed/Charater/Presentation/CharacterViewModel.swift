@@ -8,6 +8,11 @@
 import Foundation
 
 public struct CharacterViewModel {
-    let title: String
-    let status: String
+    public let title: String
+    public let status: String
+    
+    public init(title:String, status:String) {
+        self.title = title
+        self.status = status
+    }
 }

@@ -24,7 +24,7 @@ public final class FeedCharacterCellController: NSObject, UITableViewDataSource,
     public init(
         model: FeedCharacter,
         delegate: FeedImageCellControllerDelegate,
-        selection: (FeedCharacter) -> Void) {
+        selection:@escaping (FeedCharacter) -> Void) {
         self.model = model
         self.delegate = delegate
         self.selection = selection
@@ -50,7 +50,7 @@ public final class FeedCharacterCellController: NSObject, UITableViewDataSource,
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selection()
+        selection(model)
     }
     
     private func cancelLoad() {

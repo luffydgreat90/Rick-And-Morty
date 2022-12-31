@@ -23,7 +23,8 @@ public enum FeedUIComposer {
         viewController.onRefresh = adapter.loadResource
         adapter.presenter = LoadResourcePresenter(resourceView: FeedViewAdapter(
             controller: viewController,
-            imageLoader: imageLoader
+            imageLoader: imageLoader,
+            selection: selection
             ), loadingView: WeakRefVirtualProxy(viewController),
                errorView: WeakRefVirtualProxy(viewController),
                mapper: { FeedCharacterPresenter.map($0) })
