@@ -15,7 +15,8 @@ public enum FeedUIComposer {
     
     public static func feedComposeWith(
         feedLoader: @escaping () -> AnyPublisher<[FeedCharacter], Error>,
-        imageLoader: @escaping (URL) -> AnyPublisher<Data, Error>
+        imageLoader: @escaping (URL) -> AnyPublisher<Data, Error>,
+        selection: @escaping (FeedCharacter) -> Void
     ) -> FeedViewController {
         let viewController = makeFeedViewController(title: FeedCharacterPresenter.title)
         let adapter = FeedsPresentationAdapter(loader: feedLoader)

@@ -13,12 +13,16 @@ import RickAndMortyiOS
 final class FeedViewAdapter: ResourceView {
     private weak var controller: FeedViewController?
     private let imageLoader: (URL) -> ImageDataLoader.Publisher
-    
+    private let selection: (FeedCharacter) -> Void
     private typealias ImageDataPresentationAdapter = LoadResourcePresentationAdapter<Data, WeakRefVirtualProxy<FeedCharacterCellController>>
     
-    init(controller: FeedViewController? = nil, imageLoader: @escaping (URL) -> ImageDataLoader.Publisher) {
+    init(
+        controller: FeedViewController? = nil,
+        imageLoader: @escaping (URL) -> ImageDataLoader.Publisher,
+        selection: @escaping (FeedCharacter) -> Void) {
         self.controller = controller
         self.imageLoader = imageLoader
+        self.selection = selection
     }
     
     func display(_ viewModel: FeedViewModel) {

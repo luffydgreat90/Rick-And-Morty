@@ -12,7 +12,8 @@ import RickAndMortyiOS
 
 public enum CharacterUIComposer {
     
-    public static func characterComposeWith(character:CharacterViewModel) -> CharacterViewController {
+    public static func characterComposeWith(
+        character:CharacterViewModel) -> CharacterViewController {
         let viewController = makeCharacterViewController(title: character.title)
         
         return viewController

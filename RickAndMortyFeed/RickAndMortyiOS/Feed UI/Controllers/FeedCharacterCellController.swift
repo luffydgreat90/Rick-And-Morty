@@ -19,10 +19,15 @@ public final class FeedCharacterCellController: NSObject, UITableViewDataSource,
     private let delegate: FeedImageCellControllerDelegate
     public typealias ResourceViewModel = UIImage
     private var cell: FeedCharacterCell?
+    private let selection: (FeedCharacter) -> Void
     
-    public init(model: FeedCharacter, delegate: FeedImageCellControllerDelegate) {
+    public init(
+        model: FeedCharacter,
+        delegate: FeedImageCellControllerDelegate,
+        selection: (FeedCharacter) -> Void) {
         self.model = model
         self.delegate = delegate
+        self.selection = selection
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,8 +44,23 @@ public final class FeedCharacterCellController: NSObject, UITableViewDataSource,
     public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         delegate.didRequestImage()
     }
-    
 
+    public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cancelLoad()
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selection()
+    }
+    
+    private func cancelLoad() {
+        releaseCellForReuse()
+        delegate.didCancelImageRequest()
+    }
+    
+    private func releaseCellForReuse() {
+        cell = nil
+    }
 }
 
 extension FeedCharacterCellController: ResourceView, ResourceLoadingView, ResourceErrorView {
