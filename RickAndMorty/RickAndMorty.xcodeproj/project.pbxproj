@@ -22,6 +22,7 @@
 		8EBD097B2958E82300767901 /* RickAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD097A2958E82300767901 /* RickAndMortyTests.swift */; };
 		8EBD09852958E82300767901 /* RickAndMortyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09842958E82300767901 /* RickAndMortyUITests.swift */; };
 		8EBD09872958E82300767901 /* RickAndMortyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09862958E82300767901 /* RickAndMortyUITestsLaunchTests.swift */; };
+		8ED3E758296091A800347EF5 /* CharacterUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED3E757296091A800347EF5 /* CharacterUIComposer.swift */; };
 		8EDF2769295CEDE30018D0F9 /* FeedAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDF2768295CEDE30018D0F9 /* FeedAdapter.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		8EBD09802958E82300767901 /* RickAndMortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09842958E82300767901 /* RickAndMortyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyUITests.swift; sourceTree = "<group>"; };
 		8EBD09862958E82300767901 /* RickAndMortyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8ED3E757296091A800347EF5 /* CharacterUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUIComposer.swift; sourceTree = "<group>"; };
 		8EDF2768295CEDE30018D0F9 /* FeedAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 		8ED3E7562960902D00347EF5 /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				8ED3E757296091A800347EF5 /* CharacterUIComposer.swift */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				8EBD09662958E82100767901 /* SceneDelegate.swift in Sources */,
 				8E5D6B01295B09560044173F /* CombineHelpers.swift in Sources */,
 				8EDF2769295CEDE30018D0F9 /* FeedAdapter.swift in Sources */,
+				8ED3E758296091A800347EF5 /* CharacterUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
