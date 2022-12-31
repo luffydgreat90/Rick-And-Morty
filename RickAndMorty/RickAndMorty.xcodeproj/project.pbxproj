@@ -166,6 +166,7 @@
 		8EBD09622958E82100767901 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				8ED3E7562960902D00347EF5 /* Character */,
 				8E5D6AFD295B08B30044173F /* Shared */,
 				8E5D6AFA295AFB280044173F /* Helpers */,
 				8E3C36F7295A33DA00EA6ADC /* Feed */,
@@ -193,6 +194,13 @@
 				8EBD09862958E82300767901 /* RickAndMortyUITestsLaunchTests.swift */,
 			);
 			path = RickAndMortyUITests;
+			sourceTree = "<group>";
+		};
+		8ED3E7562960902D00347EF5 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
