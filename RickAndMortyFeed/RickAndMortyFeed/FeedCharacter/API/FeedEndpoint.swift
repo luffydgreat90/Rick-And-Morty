@@ -16,5 +16,4 @@ public enum FeedEndpoint {
             return baseURL.appendingPathComponent("/character")
         }
     }
-    
 }
