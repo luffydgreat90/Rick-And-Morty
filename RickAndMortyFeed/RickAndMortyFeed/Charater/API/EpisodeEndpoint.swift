@@ -12,7 +12,7 @@ public enum EpisodeEndpoint {
 
     public func url(baseURL: URL) -> URL {
         switch self {
-        case .get(episodeID):
+        case let .get(episodeID):
             return baseURL.appendingPathComponent("/episode/\(episodeID)")
         }
     }

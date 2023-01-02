@@ -65,17 +65,16 @@ public final class FeedCharacterCellController: NSObject, UITableViewDataSource,
 
 extension FeedCharacterCellController: ResourceView, ResourceLoadingView, ResourceErrorView {
     public func display(_ viewModel: UIImage) {
+        cell?.feedImageView.backgroundColor = .clear
         cell?.feedImageView.image = viewModel
     }
     
     public func display(_ viewModel: ResourceLoadingViewModel) {
-        
+    
     }
     
     public func display(_ viewModel: ResourceErrorViewModel) {
-        
+        cell?.feedImageView.backgroundColor = .gray
     }
-    
-    
 }
 

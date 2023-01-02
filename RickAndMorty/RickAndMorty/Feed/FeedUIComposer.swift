@@ -21,6 +21,7 @@ public enum FeedUIComposer {
         let viewController = makeFeedViewController(title: FeedCharacterPresenter.title)
         let adapter = FeedsPresentationAdapter(loader: feedLoader)
         viewController.onRefresh = adapter.loadResource
+        
         adapter.presenter = LoadResourcePresenter(resourceView: FeedViewAdapter(
             controller: viewController,
             imageLoader: imageLoader,

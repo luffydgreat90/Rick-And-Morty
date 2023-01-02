@@ -28,9 +28,9 @@ final class FeedViewAdapter: ResourceView {
     func display(_ viewModel: FeedViewModel) {
         controller?.display(viewModel.feed.map { viewModel in
             
-            let imagePresenter = ImageDataPresentationAdapter.init(loader: { [imageLoader] in
-                imageLoader(viewModel.image) })
-            
+            let imagePresenter = ImageDataPresentationAdapter(loader: { [imageLoader] in
+                imageLoader(viewModel.image) }
+            )
             
             let feedCharacterCell = FeedCharacterCellController(
                 model: viewModel,

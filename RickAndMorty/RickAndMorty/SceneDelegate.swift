@@ -74,10 +74,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .getPublisher(url: url)
             .tryMap(FeedCharactersMapper.map)
             .eraseToAnyPublisher()
-            
     }
     
-    private func makeLocalImageLoaderWithRemoteFallback(url: URL) -> ImageDataLoader.Publisher {
+    private func makeLocalImageLoaderWithRemoteFallback(url: URL) -> AnyPublisher<Data, Error>{
         let localImageLoader = LocalFeedImageDataLoader(store: store)
     
         return localImageLoader.loadImageDataPublisher(from: url)
