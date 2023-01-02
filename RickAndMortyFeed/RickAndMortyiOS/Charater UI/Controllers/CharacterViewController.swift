@@ -13,18 +13,24 @@ public final class CharacterViewController: UIViewController {
     @IBOutlet private(set) var statusLabel: UILabel!
     @IBOutlet private(set) var locationLabel: UILabel!
     
+    public var onLoad: (() -> Void)?
     private var delegate: FeedImageControllerDelegate?
+   
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
+        load()
     }
-    
-    
     
     public func display(_ viewModel: CharacterViewModel, delegate: FeedImageControllerDelegate) {
         self.delegate = delegate
         self.delegate?.didRequestImage()
-        
         self.statusLabel.text = viewModel.status
+        self.locationLabel.text = viewModel.location
+    }
+    
+    public func load() {
+        onLoad?()
     }
 }
 

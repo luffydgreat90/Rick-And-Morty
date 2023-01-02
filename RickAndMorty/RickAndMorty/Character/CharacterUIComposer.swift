@@ -39,6 +39,7 @@ public enum CharacterUIComposer {
         let storyboard = UIStoryboard(name: "Character", bundle: bundle)
         let controller = storyboard.instantiateInitialViewController() as! CharacterViewController
         controller.title = title
+        controller.loadViewIfNeeded()
         return controller
     }
 
