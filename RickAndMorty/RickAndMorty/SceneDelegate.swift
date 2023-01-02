@@ -62,7 +62,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func showCharacter(for character: FeedCharacter) {
-        let viewModel = CharacterViewModel(title: character.name, status: character.status, image: character.image)
+        let viewModel = CharacterViewModel(title: character.name, status: character.status, image: character.image, location: character.location)
         
         let viewController = CharacterUIComposer.characterComposeWith(
             character: viewModel,

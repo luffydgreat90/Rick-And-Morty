@@ -11,10 +11,12 @@ public struct CharacterViewModel {
     public let title: String
     public let status: String
     public let image:URL
+    public let location:String
     
-    public init(title:String, status:String, image:URL) {
+    public init(title:String, status:String, image:URL, location:String) {
         self.title = title
         self.status = status
         self.image = image
+        self.location = location
     }
 }

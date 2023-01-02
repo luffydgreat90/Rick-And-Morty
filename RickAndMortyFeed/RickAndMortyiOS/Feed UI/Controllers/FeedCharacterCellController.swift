@@ -8,7 +8,7 @@
 import UIKit
 import RickAndMortyFeed
 
-public protocol FeedImageCellControllerDelegate {
+public protocol FeedImageControllerDelegate {
     func didRequestImage()
     func didCancelImageRequest()
 }
@@ -16,14 +16,14 @@ public protocol FeedImageCellControllerDelegate {
 public final class FeedCharacterCellController: NSObject, UITableViewDataSource, UITableViewDelegate, UITableViewDataSourcePrefetching {
     
     private let model: FeedCharacter
-    private let delegate: FeedImageCellControllerDelegate
+    private let delegate: FeedImageControllerDelegate
     public typealias ResourceViewModel = UIImage
     private var cell: FeedCharacterCell?
     private let selection: (FeedCharacter) -> Void
     
     public init(
         model: FeedCharacter,
-        delegate: FeedImageCellControllerDelegate,
+        delegate: FeedImageControllerDelegate,
         selection:@escaping (FeedCharacter) -> Void) {
         self.model = model
         self.delegate = delegate

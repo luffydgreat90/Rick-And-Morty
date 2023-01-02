@@ -19,15 +19,17 @@ public enum CharacterUIComposer {
             
             let viewController = makeCharacterViewController(title: character.title)
         
-            let imagePresenter = ImageDataPresentationAdapter(loader: { [imageLoader] in
+            let adapter = ImageDataPresentationAdapter(loader: { [imageLoader] in
                 imageLoader(character.image) }
             )
             
-            imagePresenter.presenter = LoadResourcePresenter(
+            adapter.presenter = LoadResourcePresenter(
                 resourceView: WeakRefVirtualProxy(viewController),
                 loadingView: WeakRefVirtualProxy(viewController),
                 errorView: WeakRefVirtualProxy(viewController),
                 mapper: UIImage.tryMake)
+            
+            viewController.display(character, delegate: adapter)
         
             return viewController
     }

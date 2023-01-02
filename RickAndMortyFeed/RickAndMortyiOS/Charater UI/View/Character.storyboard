@@ -114,10 +114,15 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="OAD-TQ-XKD" secondAttribute="bottom" id="bc6-Hb-XDI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="characterImageView" destination="Dqb-y6-OHs" id="Tr5-s3-Geg"/>
+                        <outlet property="locationLabel" destination="jZP-To-gyO" id="FXb-Ps-tAI"/>
+                        <outlet property="statusLabel" destination="La3-Wc-3f1" id="MgI-B0-GVh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.824427480916029" y="-23.239436619718312"/>
+            <point key="canvasLocation" x="-683" y="-25"/>
         </scene>
     </scenes>
     <resources>

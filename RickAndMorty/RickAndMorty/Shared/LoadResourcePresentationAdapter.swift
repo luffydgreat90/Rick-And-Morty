@@ -21,7 +21,6 @@ final class LoadResourcePresentationAdapter<Resource, View: ResourceView> {
     
     func loadResource() {
         presenter?.didStartLoading()
-        
         cancellable = loader()
             .dispatchOnMainQueue()
             .sink(receiveCompletion: { [weak self] completion in
@@ -39,7 +38,7 @@ final class LoadResourcePresentationAdapter<Resource, View: ResourceView> {
 
 }
 
-extension LoadResourcePresentationAdapter: FeedImageCellControllerDelegate {
+extension LoadResourcePresentationAdapter: FeedImageControllerDelegate {
     func didRequestImage() {
         self.loadResource()
     }
@@ -48,5 +47,4 @@ extension LoadResourcePresentationAdapter: FeedImageCellControllerDelegate {
         cancellable?.cancel()
         cancellable = nil
     }
-
 }
