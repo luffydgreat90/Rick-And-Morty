@@ -11,12 +11,25 @@ import RickAndMortyFeed
 import RickAndMortyiOS
 
 public enum CharacterUIComposer {
-
+    private typealias ImageDataPresentationAdapter = LoadResourcePresentationAdapter<Data, WeakRefVirtualProxy<CharacterViewController>>
+    
     public static func characterComposeWith(
         character:CharacterViewModel,
         imageLoader: @escaping (URL) -> ImageDataLoader.Publisher) -> CharacterViewController {
-        let viewController = makeCharacterViewController(title: character.title)
-        return viewController
+            
+            let viewController = makeCharacterViewController(title: character.title)
+        
+            let imagePresenter = ImageDataPresentationAdapter(loader: { [imageLoader] in
+                imageLoader(character.image) }
+            )
+            
+            imagePresenter.presenter = LoadResourcePresenter(
+                resourceView: WeakRefVirtualProxy(viewController),
+                loadingView: WeakRefVirtualProxy(viewController),
+                errorView: WeakRefVirtualProxy(viewController),
+                mapper: UIImage.tryMake)
+        
+            return viewController
     }
     
     private static func makeCharacterViewController(title: String) -> CharacterViewController {
@@ -27,21 +40,4 @@ public enum CharacterUIComposer {
         return controller
     }
 
-}
-
-public final class CharacterAdapter {
-    private let imageLoader: (URL) -> ImageDataLoader.Publisher
-    private weak var controller: CharacterViewController?
-    
-    private typealias ImageDataPresentationAdapter = LoadResourcePresentationAdapter<Data, WeakRefVirtualProxy<FeedCharacterCellController>>
-    
-    init(controller: CharacterViewController? = nil,
-        imageLoader: @escaping (URL) -> ImageDataLoader.Publisher) {
-        self.controller = controller
-        self.imageLoader = imageLoader
-    }
-    
-    func display(_ viewModel: CharacterViewModel) {
-        
-    }
 }

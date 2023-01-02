@@ -62,8 +62,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func showCharacter(for character: FeedCharacter) {
-        let viewModel = CharacterViewModel(title: character.name, status: character.status)
-        let viewController = CharacterUIComposer.characterComposeWith(character: viewModel)
+        let viewModel = CharacterViewModel(title: character.name, status: character.status, image: character.image)
+        
+        let viewController = CharacterUIComposer.characterComposeWith(
+            character: viewModel,
+            imageLoader: makeLocalImageLoaderWithRemoteFallback(url:))
+        
         navigationController.pushViewController(viewController, animated: true)
     }
     

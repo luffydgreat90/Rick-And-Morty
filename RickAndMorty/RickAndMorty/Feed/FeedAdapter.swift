@@ -14,6 +14,7 @@ final class FeedViewAdapter: ResourceView {
     private weak var controller: FeedViewController?
     private let imageLoader: (URL) -> ImageDataLoader.Publisher
     private let selection: (FeedCharacter) -> Void
+    
     private typealias ImageDataPresentationAdapter = LoadResourcePresentationAdapter<Data, WeakRefVirtualProxy<FeedCharacterCellController>>
     
     init(

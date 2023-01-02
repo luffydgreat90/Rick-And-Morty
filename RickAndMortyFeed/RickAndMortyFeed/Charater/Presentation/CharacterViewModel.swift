@@ -10,9 +10,11 @@ import Foundation
 public struct CharacterViewModel {
     public let title: String
     public let status: String
+    public let image:URL
     
-    public init(title:String, status:String) {
+    public init(title:String, status:String, image:URL) {
         self.title = title
         self.status = status
+        self.image = image
     }
 }

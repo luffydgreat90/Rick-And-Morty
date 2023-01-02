@@ -6,13 +6,35 @@
 //
 
 import UIKit
+import RickAndMortyFeed
 
 public final class CharacterViewController: UIViewController {
-
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    public func display(_ viewModel: CharacterViewModel) {
+        
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension CharacterViewController: ResourceView {
+    
+    public typealias ResourceViewModel = UIImage
+    
+    public func display(_ viewModel: UIImage) {
+        
+    }
+}
+
+extension CharacterViewController: ResourceLoadingView, ResourceErrorView {
+    public func display(_ viewModel: RickAndMortyFeed.ResourceLoadingViewModel) {
+        
+    }
+    
+    public func display(_ viewModel: RickAndMortyFeed.ResourceErrorViewModel) {
+        
     }
 
 }
