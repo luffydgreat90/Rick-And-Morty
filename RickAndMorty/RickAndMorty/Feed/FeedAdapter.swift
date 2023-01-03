@@ -35,7 +35,7 @@ final class FeedViewAdapter: ResourceView {
             
             let feedCharacterCell = FeedCharacterCellController(
                 model: viewModel,
-                delegate: imagePresenter as FeedImageControllerDelegate,
+                delegate: imagePresenter,
                 selection: selection)
             
             imagePresenter.presenter = LoadResourcePresenter(

@@ -296,6 +296,7 @@
 		8E3C36FF295A375E00EA6ADC /* Shared UI */ = {
 			isa = PBXGroup;
 			children = (
+				8EA9B8F22963938A005E6080 /* Controllers */,
 				8E5D6B06295B54880044173F /* Views */,
 			);
 			path = "Shared UI";
@@ -354,6 +355,13 @@
 				8E5D6B05295B53E70044173F /* Helpers */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8EA9B8F22963938A005E6080 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		8EBD09932958EA1700767901 = {

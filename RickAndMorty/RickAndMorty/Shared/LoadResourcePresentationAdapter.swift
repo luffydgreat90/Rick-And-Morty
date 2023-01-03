@@ -38,7 +38,7 @@ final class LoadResourcePresentationAdapter<Resource, View: ResourceView> {
 
 }
 
-extension LoadResourcePresentationAdapter: FeedImageControllerDelegate {
+extension LoadResourcePresentationAdapter: ImageControllerDelegate {
     func didRequestImage() {
         self.loadResource()
     }

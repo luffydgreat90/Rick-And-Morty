@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol CharacterImageDataCache {
+public protocol ImageDataCache {
     func save(_ data: Data, for url: URL) throws
 }
 
@@ -19,7 +19,7 @@ public final class LocalFeedImageDataLoader {
     }
 }
 
-extension LocalFeedImageDataLoader: CharacterImageDataCache {
+extension LocalFeedImageDataLoader: ImageDataCache {
     public enum SaveError: Error {
         case failed
     }

@@ -41,14 +41,14 @@ public extension ImageDataLoader {
 }
 
 extension Publisher where Output == Data {
-    func caching(to cache: CharacterImageDataCache, using url: URL) -> AnyPublisher<Output, Failure> {
+    func caching(to cache: ImageDataCache, using url: URL) -> AnyPublisher<Output, Failure> {
         handleEvents(receiveOutput: { data in
             cache.saveIgnoringResult(data, for: url)
         }).eraseToAnyPublisher()
     }
 }
 
-private extension CharacterImageDataCache {
+private extension ImageDataCache {
     func saveIgnoringResult(_ data: Data, for url: URL) {
         try? save(data, for: url)
     }

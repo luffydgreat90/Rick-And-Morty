@@ -29,8 +29,13 @@ public enum CharacterUIComposer {
                 errorView: WeakRefVirtualProxy(viewController),
                 mapper: UIImage.tryMake)
             
-            viewController.display(character, delegate: adapter)
+            viewController.onLoadImage = {
+                adapter.didRequestImage()
+            }
+            
+            viewController.display(character)
         
+          
             return viewController
     }
     
