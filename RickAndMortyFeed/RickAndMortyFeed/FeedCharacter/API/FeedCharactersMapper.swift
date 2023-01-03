@@ -22,6 +22,7 @@ public enum FeedCharactersMapper {
         let url: URL
         let origin: RemoteOrigin
         let location: RemoteLocation
+        let created: Date
     }
     private struct RemoteOrigin: Decodable {
         let name: String
@@ -39,7 +40,7 @@ public enum FeedCharactersMapper {
     
     public static func map(_ data: Data, from response: HTTPURLResponse) throws -> [FeedCharacter] {
         let decoder = JSONDecoder()
-        
+        decoder.dateDecodingStrategy = .formatted(.iso8601)
         guard response.isOK, let root = try? decoder.decode(Root.self, from: data) else {
             throw Error.invalidData
         }
@@ -55,7 +56,8 @@ public enum FeedCharactersMapper {
                           origin: $0.origin.name,
                           originURL: URL(string: $0.origin.url),
                           location: $0.location.name,
-                          locationURL: URL(string: $0.location.url))
+                          locationURL: URL(string: $0.location.url),
+                          created: $0.created)
         }
     }
 }

@@ -32,6 +32,7 @@
 		8E5D6B04295B40FA0044173F /* FeedCharacterCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D6B03295B40FA0044173F /* FeedCharacterCellController.swift */; };
 		8E5D6B08295B549E0044173F /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D6B07295B549E0044173F /* UITableView+Dequeueing.swift */; };
 		8E5D6B0A295B8AA90044173F /* ImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D6B09295B8AA90044173F /* ImageDataLoader.swift */; };
+		8EA9B8F92964452F005E6080 /* DateFormatter+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA9B8F82964452F005E6080 /* DateFormatter+Helpers.swift */; };
 		8EBD09A82958EA1700767901 /* RickAndMortyFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBD099D2958EA1700767901 /* RickAndMortyFeed.framework */; };
 		8EBD09AD2958EA1700767901 /* FeedCharactersMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */; };
 		8EBD09BA2958F0AE00767901 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD09B92958F0AE00767901 /* SharedTestHelpers.swift */; };
@@ -114,6 +115,7 @@
 		8E5D6B03295B40FA0044173F /* FeedCharacterCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharacterCellController.swift; sourceTree = "<group>"; };
 		8E5D6B07295B549E0044173F /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		8E5D6B09295B8AA90044173F /* ImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataLoader.swift; sourceTree = "<group>"; };
+		8EA9B8F82964452F005E6080 /* DateFormatter+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Helpers.swift"; sourceTree = "<group>"; };
 		8EBD099D2958EA1700767901 /* RickAndMortyFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RickAndMortyFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09A72958EA1700767901 /* RickAndMortyFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD09AC2958EA1700767901 /* FeedCharactersMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCharactersMapperTests.swift; sourceTree = "<group>"; };
@@ -364,6 +366,45 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		8EA9B8F329643B41005E6080 /* Episode */ = {
+			isa = PBXGroup;
+			children = (
+				8ED3E7592960AD3600347EF5 /* API */,
+			);
+			path = Episode;
+			sourceTree = "<group>";
+		};
+		8EA9B8F429643EBD005E6080 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				8EA9B8F529643ECA005E6080 /* API */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		8EA9B8F529643ECA005E6080 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8EA9B8F629644504005E6080 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8EA9B8F72964450C005E6080 /* Helpers */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8EA9B8F72964450C005E6080 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8EA9B8F82964452F005E6080 /* DateFormatter+Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		8EBD09932958EA1700767901 = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +431,8 @@
 		8EBD099F2958EA1700767901 /* RickAndMortyFeed */ = {
 			isa = PBXGroup;
 			children = (
+				8EA9B8F429643EBD005E6080 /* Location */,
+				8EA9B8F329643B41005E6080 /* Episode */,
 				8ED3E74929608C6000347EF5 /* Charater */,
 				8E3C36CA2959E1AA00EA6ADC /* Shared */,
 				8EBD09BC2958FB8F00767901 /* FeedCharacter */,
@@ -520,7 +563,7 @@
 		8ED3E74929608C6000347EF5 /* Charater */ = {
 			isa = PBXGroup;
 			children = (
-				8ED3E7592960AD3600347EF5 /* API */,
+				8EA9B8F629644504005E6080 /* API */,
 				8ED3E75029608FB900347EF5 /* Presentation */,
 			);
 			path = Charater;
@@ -805,6 +848,7 @@
 			files = (
 				8EDF2765295CBE7B0018D0F9 /* CoreDataFeedCharacterStore+ImageDataStore.swift in Sources */,
 				8EDF275F295C56940018D0F9 /* LocalFeedLoader.swift in Sources */,
+				8EA9B8F92964452F005E6080 /* DateFormatter+Helpers.swift in Sources */,
 				8E5D6B0A295B8AA90044173F /* ImageDataLoader.swift in Sources */,
 				8EDF2767295CC56C0018D0F9 /* LocalFeedImageDataLoader.swift in Sources */,
 				8E3C371C295A6E0900EA6ADC /* LoadResourcePresenter.swift in Sources */,
